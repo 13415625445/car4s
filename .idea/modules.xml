@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/car4s.iml" filepath="$PROJECT_DIR$/car4s.iml" />
+      <module fileurl="file://$PROJECT_DIR$/car4s-common/car4s-common.iml" filepath="$PROJECT_DIR$/car4s-common/car4s-common.iml" />
+      <module fileurl="file://$PROJECT_DIR$/car4s-manager/car4s-manager.iml" filepath="$PROJECT_DIR$/car4s-manager/car4s-manager.iml" />
+      <module fileurl="file://$PROJECT_DIR$/car4s-manager/car4s-manager-mapper/car4s-manager-mapper.iml" filepath="$PROJECT_DIR$/car4s-manager/car4s-manager-mapper/car4s-manager-mapper.iml" />
+      <module fileurl="file://$PROJECT_DIR$/car4s-manager/car4s-manager-pojo/car4s-manager-pojo.iml" filepath="$PROJECT_DIR$/car4s-manager/car4s-manager-pojo/car4s-manager-pojo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/car4s-manager/car4s-manager-service/car4s-manager-service.iml" filepath="$PROJECT_DIR$/car4s-manager/car4s-manager-service/car4s-manager-service.iml" />
+      <module fileurl="file://$PROJECT_DIR$/car4s-manager/car4s-manager-web/car4s-manager-web.iml" filepath="$PROJECT_DIR$/car4s-manager/car4s-manager-web/car4s-manager-web.iml" />
+    </modules>
+  </component>
+</project>
