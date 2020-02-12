@@ -6,11 +6,12 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="car4s-common" />
+        <module name="car4s-manager-mapper" />
         <module name="car4s-manager-pojo" />
         <module name="car4s-manager-service" />
-        <module name="car4s-manager-mapper" />
         <module name="car4s-manager-web" />
-        <module name="car4s-common" />
+        <module name="mybatisgenerator" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
@@ -22,6 +23,7 @@
       <module name="car4s-manager-pojo" target="1.7" />
       <module name="car4s-manager-service" target="1.7" />
       <module name="car4s-manager-web" target="1.7" />
+      <module name="mybatisgenerator" target="1.7" />
     </bytecodeTargetLevel>
   </component>
 </project>
