@@ -1,5 +1,6 @@
 package com.car4s.service;
 
+import com.car4s.common.pojo.EUDataGridResult;
 import com.car4s.generator.pojo.TbItem;
 
 /**
@@ -8,4 +9,7 @@ import com.car4s.generator.pojo.TbItem;
 public interface ItemService {
 
     TbItem findById(Long id);
+
+    EUDataGridResult getItemList(int page,int rows);
+
 }

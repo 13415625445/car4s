@@ -1,5 +1,6 @@
 package com.car4s.controller;
 
+import com.car4s.common.pojo.EUDataGridResult;
 import com.car4s.generator.pojo.TbItem;
 import com.car4s.service.ItemService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -21,5 +22,12 @@ public class ItemController {
     public TbItem getItemById(@PathVariable Long itemId){
         TbItem tbItem = itemService.findById(itemId);
         return tbItem;
+    }
+
+    @RequestMapping("/item/list")
+    @ResponseBody
+    public EUDataGridResult getItemList(Integer page,Integer rows){
+        EUDataGridResult result = itemService.getItemList(page, rows);
+        return result;
     }
 }
