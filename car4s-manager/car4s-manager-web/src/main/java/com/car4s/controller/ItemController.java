@@ -3,6 +3,7 @@ package com.car4s.controller;
 import com.car4s.common.pojo.Car4sResult;
 import com.car4s.common.pojo.EUDataGridResult;
 import com.car4s.generator.pojo.TbItem;
+import com.car4s.generator.pojo.TbItemDesc;
 import com.car4s.service.ItemService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -19,6 +20,7 @@ public class ItemController {
     @Autowired
     private ItemService itemService;
 
+    //根据id获得车型
     @RequestMapping("/item/{itemId}")
     @ResponseBody
     public TbItem getItemById(@PathVariable Long itemId){
@@ -26,6 +28,7 @@ public class ItemController {
         return tbItem;
     }
 
+    //获取车型列表
     @RequestMapping("/item/list")
     @ResponseBody
     public EUDataGridResult getItemList(Integer page,Integer rows){
@@ -33,10 +36,11 @@ public class ItemController {
         return result;
     }
 
+    //保存车型
     @RequestMapping(value = "/item/save",method = RequestMethod.POST)
     @ResponseBody
-    public Car4sResult createItem(TbItem tbItem){
-        Car4sResult result = itemService.createItem(tbItem);
+    public Car4sResult createItem(TbItem tbItem, String tbItemDesc) throws Exception {
+        Car4sResult result = itemService.createItem(tbItem, tbItemDesc);
         return  result;
     }
 }
