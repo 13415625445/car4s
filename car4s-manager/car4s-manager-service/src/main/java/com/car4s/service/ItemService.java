@@ -14,6 +14,6 @@ public interface ItemService {
 
     EUDataGridResult getItemList(int page,int rows);
 
-    Car4sResult createItem(TbItem item, String itemDesc) throws Exception;
+    Car4sResult createItem(TbItem item, String itemDesc, String itemParam) throws Exception;
 
 }

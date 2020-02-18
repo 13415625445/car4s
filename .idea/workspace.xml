@@ -6,8 +6,18 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a53f7d61-2728-43db-89bc-f28943b9f586" name="Default Changelist" comment="添加汽车新增功能和图片上传到ftp">
+    <list default="true" id="a53f7d61-2728-43db-89bc-f28943b9f586" name="Default Changelist" comment="为新增汽车型号添加描述">
+      <change afterPath="$PROJECT_DIR$/car4s-manager/car4s-manager-service/src/main/java/com/car4s/service/Impl/ItemParamItemServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/car4s-manager/car4s-manager-service/src/main/java/com/car4s/service/Impl/ItemParamServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/car4s-manager/car4s-manager-service/src/main/java/com/car4s/service/ItemParamItemService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/car4s-manager/car4s-manager-service/src/main/java/com/car4s/service/ItemParamService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/car4s-manager/car4s-manager-web/src/main/java/com/car4s/controller/ItemParamController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/car4s-manager/car4s-manager-web/src/main/java/com/car4s/controller/ItemParamItemController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/car4s-manager/car4s-manager-service/src/main/java/com/car4s/service/Impl/ItemServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/car4s-manager/car4s-manager-service/src/main/java/com/car4s/service/Impl/ItemServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/car4s-manager/car4s-manager-service/src/main/java/com/car4s/service/ItemService.java" beforeDir="false" afterPath="$PROJECT_DIR$/car4s-manager/car4s-manager-service/src/main/java/com/car4s/service/ItemService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/car4s-manager/car4s-manager-web/src/main/java/com/car4s/controller/ItemController.java" beforeDir="false" afterPath="$PROJECT_DIR$/car4s-manager/car4s-manager-web/src/main/java/com/car4s/controller/ItemController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/car4s-manager/car4s-manager-web/src/main/webapp/WEB-INF/jsp/item.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/car4s-manager/car4s-manager-web/src/main/webapp/WEB-INF/jsp/item.jsp" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -28,35 +38,35 @@
     <session id="69272513">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="13" />
+          <entry key="project.closed" value="14" />
           <entry key="project.open.time.0" value="1" />
           <entry key="project.open.time.1" value="2" />
           <entry key="project.open.time.12" value="4" />
-          <entry key="project.open.time.13" value="2" />
+          <entry key="project.open.time.13" value="3" />
           <entry key="project.open.time.15" value="1" />
           <entry key="project.open.time.19" value="1" />
           <entry key="project.open.time.20" value="1" />
           <entry key="project.open.time.22" value="1" />
           <entry key="project.open.time.9" value="1" />
-          <entry key="project.opened" value="14" />
+          <entry key="project.opened" value="15" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="java" value="59" />
+          <entry key="java" value="80" />
           <entry key="js" value="7" />
-          <entry key="jsp" value="11" />
-          <entry key="properties" value="4" />
+          <entry key="jsp" value="12" />
+          <entry key="properties" value="5" />
           <entry key="rnc" value="1" />
           <entry key="xml" value="35" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="JAVA" value="59" />
-          <entry key="JSP" value="11" />
+          <entry key="JAVA" value="80" />
+          <entry key="JSP" value="12" />
           <entry key="JavaScript" value="7" />
-          <entry key="Properties" value="4" />
+          <entry key="Properties" value="5" />
           <entry key="RNG Compact" value="1" />
           <entry key="XML" value="35" />
         </counts>
@@ -64,18 +74,18 @@
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="ft" value="15" />
-          <entry key="java" value="3362" />
-          <entry key="jsp" value="13" />
+          <entry key="java" value="5054" />
+          <entry key="jsp" value="17" />
           <entry key="properties" value="180" />
-          <entry key="txt" value="178" />
+          <entry key="txt" value="207" />
           <entry key="xml" value="191" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="3362" />
-          <entry key="JSP" value="13" />
-          <entry key="PLAIN_TEXT" value="178" />
+          <entry key="JAVA" value="5054" />
+          <entry key="JSP" value="17" />
+          <entry key="PLAIN_TEXT" value="207" />
           <entry key="Properties" value="180" />
           <entry key="VTL" value="15" />
           <entry key="XML" value="191" />
@@ -89,10 +99,37 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/car4s-common/src/main/java/com/car4s/common/pojo/Car4sResult.java">
+        <entry file="file://$PROJECT_DIR$/car4s-manager/car4s-manager-web/src/main/java/com/car4s/controller/ItemController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="966">
-              <caret line="51" column="5" selection-start-line="51" selection-start-column="5" selection-end-line="51" selection-end-column="5" />
+            <state relative-caret-position="230">
+              <caret line="44" column="5" lean-forward="true" selection-start-line="44" selection-start-column="5" selection-end-line="44" selection-end-column="5" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/car4s-manager/car4s-manager-web/src/main/webapp/WEB-INF/jsp/item.jsp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="253">
+              <caret line="11" column="7" lean-forward="true" selection-start-line="11" selection-start-column="7" selection-end-line="11" selection-end-column="7" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/car4s-manager/car4s-manager-service/src/main/java/com/car4s/service/ItemParamItemService.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="138">
+              <caret line="6" column="29" selection-start-line="6" selection-start-column="29" selection-end-line="6" selection-end-column="29" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/car4s-manager/car4s-manager-service/src/main/java/com/car4s/service/Impl/ItemParamItemServiceImpl.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="53">
+              <caret line="31" column="9" lean-forward="true" selection-start-line="31" selection-start-column="9" selection-end-line="31" selection-end-column="9" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -101,37 +138,22 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/car4s-manager/car4s-manager-web/src/main/java/com/car4s/controller/ItemController.java">
+        <entry file="file://$PROJECT_DIR$/car4s-manager/car4s-manager-web/src/main/java/com/car4s/controller/ItemParamController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="414">
-              <caret line="27" selection-start-line="27" selection-end-line="27" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/car4s-manager/car4s-manager-web/src/main/webapp/WEB-INF/jsp/item-param-add.jsp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="610">
-              <caret line="39" column="22" selection-start-line="39" selection-start-column="22" selection-end-line="39" selection-end-column="22" />
+            <state relative-caret-position="192">
+              <caret line="31" column="43" selection-start-line="31" selection-start-column="43" selection-end-line="31" selection-end-column="43" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/car4s-manager/car4s-manager-web/src/main/webapp/WEB-INF/jsp/item-add.jsp">
+        <entry file="file://$PROJECT_DIR$/car4s-manager/car4s-manager-service/src/main/java/com/car4s/service/ItemService.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1725">
-              <caret line="75" column="28" selection-start-line="75" selection-start-column="28" selection-end-line="75" selection-end-column="28" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/car4s-manager/car4s-manager-service/src/main/java/com/car4s/service/Impl/ItemServiceImpl.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="667">
-              <caret line="44" column="13" selection-start-line="44" selection-start-column="13" selection-end-line="44" selection-end-column="13" />
+            <state relative-caret-position="184">
+              <caret line="14" column="33" lean-forward="true" selection-start-line="14" selection-start-column="33" selection-end-line="14" selection-end-column="33" />
             </state>
           </provider>
         </entry>
@@ -192,9 +214,16 @@
         <option value="$PROJECT_DIR$/car4s-common/src/main/java/com/car4s/common/utils/JsonUtil.java" />
         <option value="$PROJECT_DIR$/car4s-manager/car4s-manager-web/src/main/java/com/car4s/controller/PictureController.java" />
         <option value="$PROJECT_DIR$/car4s-common/src/main/java/com/car4s/common/pojo/Car4sResult.java" />
+        <option value="$PROJECT_DIR$/car4s-manager/car4s-manager-service/src/main/java/com/car4s/service/ItemParamService.java" />
+        <option value="$PROJECT_DIR$/car4s-manager/car4s-manager-web/src/main/java/com/car4s/controller/ItemParamController.java" />
+        <option value="$PROJECT_DIR$/car4s-manager/car4s-manager-service/src/main/java/com/car4s/service/Impl/ItemParamServiceImpl.java" />
         <option value="$PROJECT_DIR$/car4s-manager/car4s-manager-service/src/main/java/com/car4s/service/ItemService.java" />
         <option value="$PROJECT_DIR$/car4s-manager/car4s-manager-service/src/main/java/com/car4s/service/Impl/ItemServiceImpl.java" />
         <option value="$PROJECT_DIR$/car4s-manager/car4s-manager-web/src/main/java/com/car4s/controller/ItemController.java" />
+        <option value="$PROJECT_DIR$/car4s-manager/car4s-manager-service/src/main/java/com/car4s/service/ItemParamItemService.java" />
+        <option value="$PROJECT_DIR$/car4s-manager/car4s-manager-service/src/main/java/com/car4s/service/Impl/ItemParamItemServiceImpl.java" />
+        <option value="$PROJECT_DIR$/car4s-manager/car4s-manager-web/src/main/webapp/WEB-INF/jsp/item.jsp" />
+        <option value="$PROJECT_DIR$/car4s-manager/car4s-manager-web/src/main/java/com/car4s/controller/ItemParamItemController.java" />
       </list>
     </option>
   </component>
@@ -228,27 +257,7 @@
   </component>
   <component name="MavenProjectNavigator">
     <treeState>
-      <expand>
-        <path>
-          <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
-          <item name="car4s-common" type="9519ce18:MavenProjectsStructure$ProjectNode" />
-        </path>
-        <path>
-          <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
-          <item name="car4s-common" type="9519ce18:MavenProjectsStructure$ProjectNode" />
-          <item name="Lifecycle" type="58874e2:MavenProjectsStructure$LifecycleNode" />
-        </path>
-        <path>
-          <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
-          <item name="car4s-common" type="9519ce18:MavenProjectsStructure$ProjectNode" />
-          <item name="Plugins" type="7aea1407:MavenProjectsStructure$PluginsNode" />
-        </path>
-        <path>
-          <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
-          <item name="car4s-common" type="9519ce18:MavenProjectsStructure$ProjectNode" />
-          <item name="Dependencies" type="f4be9f2a:MavenProjectsStructure$DependenciesNode" />
-        </path>
-      </expand>
+      <expand />
       <select />
     </treeState>
   </component>
@@ -266,6 +275,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -421,27 +431,7 @@
               <item name="car4s-manager-web" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="controller" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="car4s" type="b2602c69:ProjectViewProjectNode" />
-              <item name="car4s" type="462c0819:PsiDirectoryNode" />
-              <item name="car4s-manager" type="462c0819:PsiDirectoryNode" />
-              <item name="car4s-manager-web" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="resources" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="car4s" type="b2602c69:ProjectViewProjectNode" />
-              <item name="car4s" type="462c0819:PsiDirectoryNode" />
-              <item name="car4s-manager" type="462c0819:PsiDirectoryNode" />
-              <item name="car4s-manager-web" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="spring" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="car4s" type="b2602c69:ProjectViewProjectNode" />
@@ -490,22 +480,11 @@
               <item name="test" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="car4s" type="b2602c69:ProjectViewProjectNode" />
-              <item name="car4s" type="462c0819:PsiDirectoryNode" />
-              <item name="car4s-manager" type="462c0819:PsiDirectoryNode" />
-              <item name="car4s-manager-web" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
       </pane>
       <pane id="Scope" />
-      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="ProjectViewState">
@@ -517,7 +496,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1581871062891" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1582013408052" />
     <property name="ignore.virus.scanning.warn.message" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.last.edited" value="模块" />
@@ -527,6 +506,7 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\car4s\car4s-manager\car4s-manager-web\src\main\resources" />
       <recent name="D:\car4s\car4s-manager\car4s-manager-web\src\main\webapp\WEB-INF" />
       <recent name="D:\car4s\car4s-manager\car4s-manager-mapper\src\main\java\com\car4s\generator\mapper" />
       <recent name="D:\car4s\car4s-manager\car4s-manager-pojo\src\main\java\com\car4s\generator" />
@@ -745,7 +725,8 @@
       <workItem from="1581819714631" duration="4188000" />
       <workItem from="1581824980000" duration="21000" />
       <workItem from="1581825035873" duration="13072000" />
-      <workItem from="1581905162311" duration="352000" />
+      <workItem from="1581905162311" duration="2276000" />
+      <workItem from="1581989437460" duration="10583000" />
     </task>
     <task id="LOCAL-00001" summary="使用mybatis的逆向工程生成pojo类还有mapper类，参考网址https://blog.csdn.net/qq_38455201/article/details/79194792">
       <created>1581479261369</created>
@@ -789,7 +770,21 @@
       <option name="project" value="LOCAL" />
       <updated>1581870752380</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="添加汽车新增功能和图片上传到ftp">
+      <created>1581905523347</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1581905523347</updated>
+    </task>
+    <task id="LOCAL-00008" summary="为新增汽车型号添加描述">
+      <created>1581909235711</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1581909235711</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -822,7 +817,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="68876000" />
+    <option name="totallyTimeSpent" value="81383000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -837,8 +832,8 @@
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.7631206" visible="true" weight="0.3344504" />
-      <window_info id="Structure" order="1" sideWeight="0.23687944" side_tool="true" visible="true" weight="0.3344504" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.76072234" visible="true" weight="0.33914208" />
+      <window_info id="Structure" order="1" sideWeight="0.23927765" side_tool="true" visible="true" weight="0.33914208" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Capture Tool" order="3" />
       <window_info id="UI Designer" order="4" />
@@ -848,7 +843,7 @@
       <window_info id="设计器" order="8" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.7687943" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.3716312" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -861,7 +856,7 @@
       <window_info anchor="bottom" id="Database Changes" order="12" show_stripe_button="false" />
       <window_info anchor="bottom" id="Java Enterprise" order="13" weight="0.2212766" />
       <window_info anchor="bottom" id="Version Control" order="14" weight="0.32765958" />
-      <window_info active="true" anchor="bottom" id="Messages" order="15" visible="true" weight="0.32907802" />
+      <window_info anchor="bottom" id="Messages" order="15" weight="0.32907802" />
       <window_info anchor="bottom" id="调试" order="16" sideWeight="0.7607239" weight="0.2397163" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -889,7 +884,8 @@
     <MESSAGE value="添加商品分类查询" />
     <MESSAGE value="搭建ftp服务和nginx服务器，测试文件上传功能" />
     <MESSAGE value="添加汽车新增功能和图片上传到ftp" />
-    <option name="LAST_COMMIT_MESSAGE" value="添加汽车新增功能和图片上传到ftp" />
+    <MESSAGE value="为新增汽车型号添加描述" />
+    <option name="LAST_COMMIT_MESSAGE" value="为新增汽车型号添加描述" />
   </component>
   <component name="WindowStateProjectService">
     <state x="223" y="68" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1581398274854">
@@ -983,10 +979,10 @@
           <option name="timeStamp" value="16" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/car4s-manager/car4s-manager-service/src/main/java/com/car4s/service/Impl/PictureServiceImpl.java</url>
-          <line>63</line>
+          <url>file://$PROJECT_DIR$/car4s-manager/car4s-manager-web/src/main/java/com/car4s/controller/ItemParamController.java</url>
+          <line>32</line>
           <properties />
-          <option name="timeStamp" value="17" />
+          <option name="timeStamp" value="19" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
@@ -996,35 +992,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/car4s-manager/car4s-manager-mapper/src/main/java/com/car4s/generator/mapper/TbUserMapper.java">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/car4s-manager/car4s-manager-mapper/src/main/java/com/car4s/generator/mapper/TbContentCategoryMapper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="76">
-          <caret line="8" column="17" selection-start-line="8" selection-start-column="17" selection-end-line="8" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/car4s-manager/car4s-manager-mapper/src/main/java/com/car4s/generator/mapper/TbItemParamMapper.java">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/car4s-manager/car4s-manager-mapper/src/main/java/com/car4s/generator/mapper/TbItemCatMapper.java">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/car4s-manager/car4s-manager-mapper/src/main/java/com/car4s/generator/mapper/TbOrderShippingMapper.java">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/car4s-manager/car4s-manager-mapper/src/main/java/com/car4s/generator/mapper/TbContentMapper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-209">
-          <caret line="8" column="17" selection-start-line="8" selection-start-column="17" selection-end-line="8" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/car4s-manager/car4s-manager-mapper/src/main/java/com/car4s/generator/mapper/TbOrderItemMapper.java">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/car4s-manager/car4s-manager-mapper/src/main/java/com/car4s/generator/mapper/TbItemMapper.java">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -1114,24 +1081,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/car4s-manager/car4s-manager-service/src/main/java/com/car4s/service/ItemCatService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="46">
-          <caret line="2" column="40" selection-start-line="2" selection-start-column="40" selection-end-line="2" selection-end-column="40" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/car4s-manager/car4s-manager-service/src/main/java/com/car4s/service/Impl/ItemCatServiceImpl.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="575">
           <caret line="34" column="63" selection-start-line="34" selection-start-column="63" selection-end-line="34" selection-end-column="63" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/car4s-manager/car4s-manager-web/src/main/java/com/car4s/controller/ItemCatController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="598">
-          <caret line="34" selection-start-line="34" selection-end-line="34" />
         </state>
       </provider>
     </entry>
@@ -1191,13 +1144,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/car4s-manager/car4s-manager-web/src/main/webapp/WEB-INF/jsp/item.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="253">
-          <caret line="11" column="7" lean-forward="true" selection-start-line="11" selection-start-column="7" selection-end-line="11" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/car4s-manager/car4s-manager-web/src/main/webapp/WEB-INF/js/common.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="301">
@@ -1240,9 +1186,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="532">
           <caret line="56" lean-forward="true" selection-start-line="56" selection-end-line="56" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1253,25 +1196,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/car4s-manager/car4s-manager-service/src/main/java/com/car4s/service/Impl/PictureServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="185">
-          <caret line="72" selection-start-line="72" selection-end-line="72" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#605#621#1" expanded="true" />
-            <element signature="e#667#680#1" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/car4s-manager/car4s-manager-service/src/main/java/com/car4s/service/PictureService.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="230">
           <caret line="10" column="9" selection-start-line="10" selection-start-column="9" selection-end-line="10" selection-end-column="9" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1282,27 +1210,132 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/car4s-manager/car4s-manager-service/src/main/java/com/car4s/service/ItemService.java">
+    <entry file="file://$PROJECT_DIR$/car4s-manager/car4s-manager-web/src/main/webapp/WEB-INF/jsp/item-param-add.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="299">
-          <caret line="15" column="40" selection-start-line="15" selection-start-column="40" selection-end-line="15" selection-end-column="40" />
+        <state relative-caret-position="610">
+          <caret line="39" column="22" selection-start-line="39" selection-start-column="22" selection-end-line="39" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/car4s-manager/car4s-manager-web/src/main/resources/log4j.properties">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/car4s-manager/car4s-manager-web/src/main/webapp/WEB-INF/jsp/item-add.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="609">
+          <caret line="75" column="28" selection-start-line="75" selection-start-column="28" selection-end-line="75" selection-end-column="28" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/car4s-manager/car4s-manager-web/src/main/java/com/car4s/controller/PictureController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="22" column="34" selection-start-line="22" selection-start-column="34" selection-end-line="22" selection-end-column="34" />
+        <state relative-caret-position="403">
+          <caret line="24" column="50" selection-start-line="24" selection-start-column="50" selection-end-line="24" selection-end-column="50" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/car4s-manager/car4s-manager-service/src/main/java/com/car4s/service/ItemCatService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="207">
+          <caret line="9" column="17" selection-start-line="9" selection-start-column="17" selection-end-line="9" selection-end-column="17" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/car4s-manager/car4s-manager-service/src/main/java/com/car4s/service/Impl/PictureServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="297">
+          <caret line="72" selection-start-line="72" selection-end-line="72" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/car4s-manager/car4s-manager-web/src/main/java/com/car4s/controller/ItemCatController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="227">
+          <caret line="22" column="13" selection-start-line="22" selection-start-column="13" selection-end-line="22" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/car4s-common/src/main/java/com/car4s/common/pojo/Car4sResult.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="966">
+        <state>
           <caret line="51" column="5" selection-start-line="51" selection-start-column="5" selection-end-line="51" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/car4s-manager/car4s-manager-service/src/main/java/com/car4s/service/Impl/ItemParamServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-236">
+          <caret line="27" column="13" lean-forward="true" selection-start-line="27" selection-start-column="13" selection-end-line="27" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/car4s-manager/car4s-manager-service/src/main/java/com/car4s/service/ItemParamService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="230">
+          <caret line="10" column="25" lean-forward="true" selection-start-line="10" selection-start-column="25" selection-end-line="10" selection-end-column="25" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/car4s-manager/car4s-manager-service/src/main/java/com/car4s/service/ItemService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="184">
+          <caret line="14" column="33" lean-forward="true" selection-start-line="14" selection-start-column="33" selection-end-line="14" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/car4s-manager/car4s-manager-web/src/main/java/com/car4s/controller/ItemParamController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="192">
+          <caret line="31" column="43" selection-start-line="31" selection-start-column="43" selection-end-line="31" selection-end-column="43" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/car4s-manager/car4s-manager-service/src/main/java/com/car4s/service/ItemParamItemService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="138">
+          <caret line="6" column="29" selection-start-line="6" selection-start-column="29" selection-end-line="6" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/car4s-manager/car4s-manager-web/src/main/webapp/WEB-INF/jsp/item.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="253">
+          <caret line="11" column="7" lean-forward="true" selection-start-line="11" selection-start-column="7" selection-end-line="11" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/car4s-manager/car4s-manager-service/src/main/java/com/car4s/service/Impl/ItemServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="471">
+          <caret line="68" column="33" lean-forward="true" selection-start-line="68" selection-start-column="33" selection-end-line="68" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/car4s-manager/car4s-manager-web/src/main/java/com/car4s/controller/ItemParamItemController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="218">
+          <caret line="17" column="26" selection-start-line="17" selection-start-column="26" selection-end-line="17" selection-end-column="26" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -1311,29 +1344,18 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/car4s-manager/car4s-manager-web/src/main/java/com/car4s/controller/ItemController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="414">
-          <caret line="27" selection-start-line="27" selection-end-line="27" />
+        <state relative-caret-position="230">
+          <caret line="44" column="5" lean-forward="true" selection-start-line="44" selection-start-column="5" selection-end-line="44" selection-end-column="5" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/car4s-manager/car4s-manager-web/src/main/webapp/WEB-INF/jsp/item-add.jsp">
+    <entry file="file://$PROJECT_DIR$/car4s-manager/car4s-manager-service/src/main/java/com/car4s/service/Impl/ItemParamItemServiceImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1725">
-          <caret line="75" column="28" selection-start-line="75" selection-start-column="28" selection-end-line="75" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/car4s-manager/car4s-manager-service/src/main/java/com/car4s/service/Impl/ItemServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="667">
-          <caret line="44" column="13" selection-start-line="44" selection-start-column="13" selection-end-line="44" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/car4s-manager/car4s-manager-web/src/main/webapp/WEB-INF/jsp/item-param-add.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="610">
-          <caret line="39" column="22" selection-start-line="39" selection-start-column="22" selection-end-line="39" selection-end-column="22" />
+        <state relative-caret-position="53">
+          <caret line="31" column="9" lean-forward="true" selection-start-line="31" selection-start-column="9" selection-end-line="31" selection-end-column="9" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

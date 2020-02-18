@@ -39,8 +39,8 @@ public class ItemController {
     //保存车型
     @RequestMapping(value = "/item/save",method = RequestMethod.POST)
     @ResponseBody
-    public Car4sResult createItem(TbItem tbItem, String tbItemDesc) throws Exception {
-        Car4sResult result = itemService.createItem(tbItem, tbItemDesc);
+    public Car4sResult createItem(TbItem tbItem, String tbItemDesc,String itemParam) throws Exception {
+        Car4sResult result = itemService.createItem(tbItem, tbItemDesc, itemParam);
         return  result;
     }
 }
