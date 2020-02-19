@@ -11,6 +11,7 @@
         <module name="car4s-manager-pojo" />
         <module name="car4s-manager-service" />
         <module name="car4s-manager-web" />
+        <module name="car4s-rest" />
         <module name="mybatisgenerator" />
       </profile>
     </annotationProcessing>
@@ -23,6 +24,7 @@
       <module name="car4s-manager-pojo" target="1.7" />
       <module name="car4s-manager-service" target="1.7" />
       <module name="car4s-manager-web" target="1.7" />
+      <module name="car4s-rest" target="1.7" />
       <module name="mybatisgenerator" target="1.7" />
     </bytecodeTargetLevel>
   </component>

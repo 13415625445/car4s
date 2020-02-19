@@ -2,6 +2,7 @@
 <project version="4">
   <component name="FrameworkDetectionExcludesConfiguration">
     <file type="web" url="file://$PROJECT_DIR$/car4s-manager/car4s-manager-web" />
+    <file type="web" url="file://$PROJECT_DIR$/car4s-rest" />
   </component>
   <component name="MavenProjectsManager">
     <option name="originalFiles">
