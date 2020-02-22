@@ -13,6 +13,7 @@
     <module>car4s-common</module>
       <module>mybatis-generator</module>
       <module>car4s-rest</module>
+      <module>car4s-portal</module>
   </modules>
   <packaging>pom</packaging>
 
