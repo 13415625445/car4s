@@ -17,6 +17,8 @@ public class EUDataGridResult {
      */
     private List<?> rows;
 
+
+
     public long getTotal() {
         return total;
     }

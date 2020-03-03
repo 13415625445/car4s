@@ -25,6 +25,7 @@ public class ItemCatController {
     @Autowired
     private ItemCatService itemCatService;
 
+    //获去菜单分类
     @RequestMapping("/list")
     @ResponseBody
     public List<EUTreeNode> getItemCatList(@RequestParam(value = "id",defaultValue = "0") long parentId){
