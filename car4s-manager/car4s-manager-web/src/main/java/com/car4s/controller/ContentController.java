@@ -2,6 +2,7 @@ package com.car4s.controller;
 
 import com.car4s.common.pojo.Car4sResult;
 import com.car4s.common.pojo.EUDataGridResult;
+import com.car4s.common.utils.JsonUtil;
 import com.car4s.generator.pojo.TbContent;
 import com.car4s.service.ContentService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -9,6 +10,9 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
+
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * Created by 张少强
@@ -43,11 +47,11 @@ public class ContentController {
         Car4sResult result = contentService.updateContent(tbContent);
         return result;
     }
-    //删除内容
+    //删除内容（未解决多个id删除问题）
     @RequestMapping("/delete")
     @ResponseBody
-    public Car4sResult deleteContent(@RequestParam(value = "ids") long id){
-        Car4sResult result = contentService.deleteContent(id);
+    public Car4sResult deleteContent(@RequestParam(value = "ids") long ids){
+        Car4sResult result = contentService.deleteContent(ids);
         return result;
     }
 }

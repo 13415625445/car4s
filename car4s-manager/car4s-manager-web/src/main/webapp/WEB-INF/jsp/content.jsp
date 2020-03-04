@@ -91,6 +91,11 @@ var contentListToolbar = [{
     		$.messager.alert('提示','未选中商品!');
     		return ;
     	}
+    	//待修改
+        if(ids.indexOf(',') > 0){
+            $.messager.alert('提示','只能选择一个内容!');
+            return ;
+        }
     	$.messager.confirm('确认','确定删除ID为 '+ids+' 的内容吗？',function(r){
     	    if (r){
     	    	var params = {"ids":ids};

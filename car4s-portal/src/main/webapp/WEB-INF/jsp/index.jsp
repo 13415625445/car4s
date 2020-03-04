@@ -43,7 +43,7 @@
 
     cfg.DATA_MSlide = data;
     // 初始化一个广告信息
-    if ( cfg.DATA_MSlide.length > 1 ) {
+    if ( cfg.DATA_MSlide.length > 0 ) {
     	var first = pageConfig.FN_GetCompatibleData( cfg.DATA_MSlide[0] );
         var TPL = ''
             +'<ul class="slide-items">'
