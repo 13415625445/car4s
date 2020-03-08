@@ -21,4 +21,6 @@ public class IndexController {
         model.addAttribute("ad1", result);
         return "index";
     }
+
+
 }

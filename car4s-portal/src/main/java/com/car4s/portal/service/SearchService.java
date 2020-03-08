@@ -1,6 +1,6 @@
 package com.car4s.portal.service;
 
-import com.car4s.search.pojo.SearchResult;
+import com.car4s.portal.pojo.SearchResult;
 
 /**
  * Created by 张少强

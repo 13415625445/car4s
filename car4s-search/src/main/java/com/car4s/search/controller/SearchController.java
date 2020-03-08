@@ -29,13 +29,11 @@ public class SearchController {
         }
         SearchResult searchResult = null;
         try {
-            queryString = new String(queryString.getBytes("iso8859-1"),"utf-8");
            searchResult = itemSearchService.searchItem(queryString, page, rows);
         } catch (Exception e) {
             e.printStackTrace();
             return Car4sResult.build(500, ExceptionUtil.getStackTrace(e));
         }
         return Car4sResult.ok(searchResult);
-
     }
 }
