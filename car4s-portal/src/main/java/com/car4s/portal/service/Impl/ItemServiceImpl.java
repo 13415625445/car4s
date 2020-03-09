@@ -57,9 +57,9 @@ public class ItemServiceImpl implements ItemService {
             //查询商品描述
             String json = HttpClientUtil.doGet(REST_BASE_URL + ITEM_DESC_URL + itemId);
             //转换成java对象
-            Car4sResult taotaoResult = Car4sResult.formatToPojo(json, TbItemDesc.class);
-            if (taotaoResult.getStatus() == 200) {
-                TbItemDesc itemDesc = (TbItemDesc) taotaoResult.getData();
+            Car4sResult car4sResult = Car4sResult.formatToPojo(json, TbItemDesc.class);
+            if (car4sResult.getStatus() == 200) {
+                TbItemDesc itemDesc = (TbItemDesc) car4sResult.getData();
                 //取商品描述信息
                 String result = itemDesc.getItemDesc();
                 return result;
@@ -75,9 +75,9 @@ public class ItemServiceImpl implements ItemService {
         try {
             String json = HttpClientUtil.doGet(REST_BASE_URL + ITEM_PARAM_URL + itemId);
             //把json转换成java对象
-            Car4sResult taotaoResult = Car4sResult.formatToPojo(json, TbItemParamItem.class);
-            if (taotaoResult.getStatus() == 200) {
-                TbItemParamItem itemParamItem = (TbItemParamItem) taotaoResult.getData();
+            Car4sResult car4sResult = Car4sResult.formatToPojo(json, TbItemParamItem.class);
+            if (car4sResult.getStatus() == 200) {
+                TbItemParamItem itemParamItem = (TbItemParamItem) car4sResult.getData();
                 String paramData = itemParamItem.getParamData();
                 //生成html
                 // 把规格参数json数据转换成java对象
