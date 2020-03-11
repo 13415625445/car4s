@@ -12,6 +12,7 @@
       <module fileurl="file://$PROJECT_DIR$/car4s-portal/car4s-portal.iml" filepath="$PROJECT_DIR$/car4s-portal/car4s-portal.iml" />
       <module fileurl="file://$PROJECT_DIR$/car4s-rest/car4s-rest.iml" filepath="$PROJECT_DIR$/car4s-rest/car4s-rest.iml" />
       <module fileurl="file://$PROJECT_DIR$/car4s-search/car4s-search.iml" filepath="$PROJECT_DIR$/car4s-search/car4s-search.iml" />
+      <module fileurl="file://$PROJECT_DIR$/car4s-sso/car4s-sso.iml" filepath="$PROJECT_DIR$/car4s-sso/car4s-sso.iml" />
       <module fileurl="file://$PROJECT_DIR$/mybatis-generator/mybatisgenerator.iml" filepath="$PROJECT_DIR$/mybatis-generator/mybatisgenerator.iml" />
     </modules>
   </component>

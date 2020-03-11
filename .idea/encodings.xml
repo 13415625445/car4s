@@ -21,6 +21,7 @@
     <file url="file://$PROJECT_DIR$/car4s-portal" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/car4s-rest" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/car4s-search" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/car4s-sso" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/mybatis-generator" charset="UTF-8" />
     <file url="PROJECT" charset="UTF-8" />
   </component>

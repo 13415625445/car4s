@@ -5,6 +5,7 @@
     <file type="web" url="file://$PROJECT_DIR$/car4s-portal" />
     <file type="web" url="file://$PROJECT_DIR$/car4s-rest" />
     <file type="web" url="file://$PROJECT_DIR$/car4s-search" />
+    <file type="web" url="file://$PROJECT_DIR$/car4s-sso" />
   </component>
   <component name="MavenProjectsManager">
     <option name="originalFiles">

@@ -15,6 +15,7 @@
       <module>car4s-rest</module>
       <module>car4s-portal</module>
       <module>car4s-search</module>
+      <module>car4s-sso</module>
   </modules>
   <packaging>pom</packaging>
 

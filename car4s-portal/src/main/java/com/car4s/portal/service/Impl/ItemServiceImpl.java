@@ -32,7 +32,7 @@ public class ItemServiceImpl implements ItemService {
     private String ITEM_PARAM_URL;
 
     @Override
-    public ItemInfo getItemById(long itemId) {
+    public ItemInfo getItemById(Long itemId) {
         try {
             //调用rest的服务查询商品基本信息
             String json = HttpClientUtil.doGet(REST_BASE_URL + ITEM_INFO_URL + itemId);

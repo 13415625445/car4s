@@ -6,7 +6,7 @@ import com.car4s.portal.pojo.ItemInfo;
  * Created by 张少强
  */
 public interface ItemService {
-    ItemInfo getItemById(long itemId);
+    ItemInfo getItemById(Long itemId);
     String getItemDescById(Long itemId);
     String getItemParam(Long itemId);
 }

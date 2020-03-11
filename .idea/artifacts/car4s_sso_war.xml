@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="car4s-sso:war">
+    <output-path>$PROJECT_DIR$/car4s-sso/target</output-path>
+    <root id="archive" name="car4s-sso.war">
+      <element id="artifact" artifact-name="car4s-sso:war exploded" />
+    </root>
+  </artifact>
+</component>
