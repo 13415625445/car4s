@@ -1,6 +1,7 @@
 package com.car4s.sso.service.impl;
 
 import com.car4s.common.pojo.Car4sResult;
+import com.car4s.common.utils.CookieUtil;
 import com.car4s.common.utils.JsonUtil;
 import com.car4s.generator.mapper.TbUserMapper;
 import com.car4s.generator.pojo.TbUser;
@@ -13,6 +14,8 @@ import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 import org.springframework.util.DigestUtils;
 
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
 import java.util.Date;
 import java.util.List;
 import java.util.UUID;
@@ -26,7 +29,7 @@ public class UserServiceImpl implements UserService {
     @Value("${REDIS_USER_SESSION_KEY}")
     private String REDIS_USER_SESSION_KEY;
 
-    @Value("${ SSO_SESSION_EXPIRE}")
+    @Value("${SSO_SESSION_EXPIRE}")
     private Long  SSO_SESSION_EXPIRE;
 
     @Autowired
@@ -64,7 +67,7 @@ public class UserServiceImpl implements UserService {
     }
 
     @Override
-    public Car4sResult userLogin(String username, String password) {
+    public Car4sResult userLogin(String username, String password, HttpServletRequest requsest, HttpServletResponse response) {
         TbUserExample tbUserExample = new TbUserExample();
         TbUserExample.Criteria criteria = tbUserExample.createCriteria();
         criteria.andUsernameEqualTo(username);
@@ -80,6 +83,7 @@ public class UserServiceImpl implements UserService {
         tbUser.setPassword(null);
         jedisClient.set(REDIS_USER_SESSION_KEY + ":" + token, JsonUtil.objectToJson(tbUser));
         jedisClient.expire(REDIS_USER_SESSION_KEY + ":" + token,  SSO_SESSION_EXPIRE);
+        CookieUtil.setCookie(requsest,response,"TT_TOKEN",token);
         return Car4sResult.ok(token);
     }
 

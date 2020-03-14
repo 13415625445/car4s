@@ -13,6 +13,9 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
 /**
  * Created by 张少强
  */
@@ -60,6 +63,7 @@ public class UserController {
 
     //创建用户
     @RequestMapping("/register")
+    @ResponseBody
     public Car4sResult createUser(TbUser user) {
 
         try {
@@ -73,9 +77,9 @@ public class UserController {
     //用户登录
     @RequestMapping(value="/login", method= RequestMethod.POST)
     @ResponseBody
-    public Car4sResult userLogin(String username, String password) {
+    public Car4sResult userLogin(String username, String password, HttpServletRequest requsest, HttpServletResponse response) {
         try {
-            Car4sResult result = userService.userLogin(username, password);
+            Car4sResult result = userService.userLogin(username, password, requsest, response);
             return result;
         } catch (Exception e) {
             e.printStackTrace();
