@@ -9,14 +9,8 @@
     <bookmark url="file://$PROJECT_DIR$/car4s-sso/src/main/java/com/car4s/sso/controller/UserController.java" line="99" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a53f7d61-2728-43db-89bc-f28943b9f586" name="Default Changelist" comment="创建拦截器">
-      <change afterPath="$PROJECT_DIR$/car4s-portal/src/main/java/com/car4s/portal/controller/CartController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/car4s-portal/src/main/java/com/car4s/portal/pojo/CartItem.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/car4s-portal/src/main/java/com/car4s/portal/service/CartService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/car4s-portal/src/main/java/com/car4s/portal/service/Impl/CartServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/car4s-portal/src/main/webapp/WEB-INF/jsp/cartSuccess.jsp" afterDir="false" />
+    <list default="true" id="a53f7d61-2728-43db-89bc-f28943b9f586" name="Default Changelist" comment="创建收藏">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/car4s-portal/src/main/webapp/js/cart.js" beforeDir="false" afterPath="$PROJECT_DIR$/car4s-portal/src/main/webapp/js/cart.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -121,7 +115,7 @@
           <entry key="json" value="7" />
           <entry key="jsp" value="109" />
           <entry key="properties" value="964" />
-          <entry key="txt" value="446" />
+          <entry key="txt" value="479" />
           <entry key="xml" value="895" />
         </counts>
       </usages-collector>
@@ -132,7 +126,7 @@
           <entry key="JSON" value="7" />
           <entry key="JSP" value="109" />
           <entry key="JavaScript" value="238" />
-          <entry key="PLAIN_TEXT" value="463" />
+          <entry key="PLAIN_TEXT" value="496" />
           <entry key="Properties" value="964" />
           <entry key="SQL" value="3" />
           <entry key="VTL" value="36" />
@@ -196,8 +190,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/car4s-portal/src/main/webapp/js/cart.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="276">
-              <caret line="12" column="44" lean-forward="true" selection-start-line="12" selection-start-column="44" selection-end-line="12" selection-end-column="44" />
+            <state relative-caret-position="690">
+              <caret line="39" column="26" lean-forward="true" selection-start-line="39" selection-start-column="26" selection-end-line="39" selection-end-column="26" />
             </state>
           </provider>
         </entry>
@@ -462,7 +456,7 @@
     <property name="SearchEverywhereHistoryKey" value="jsonToList&#9;PSI&#9;JAVA://com.car4s.common.utils.JsonUtil#jsonToList" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1584186613923" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1584186817387" />
     <property name="ignore.virus.scanning.warn.message" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.last.edited" value="模块" />
@@ -1084,7 +1078,7 @@
       <workItem from="1584103733221" duration="5324000" />
       <workItem from="1584155598092" duration="1156000" />
       <workItem from="1584156814898" duration="11194000" />
-      <workItem from="1584176894589" duration="7487000" />
+      <workItem from="1584176894589" duration="8521000" />
     </task>
     <task id="LOCAL-00001" summary="使用mybatis的逆向工程生成pojo类还有mapper类，参考网址https://blog.csdn.net/qq_38455201/article/details/79194792">
       <created>1581479261369</created>
@@ -1240,7 +1234,14 @@
       <option name="project" value="LOCAL" />
       <updated>1584168785697</updated>
     </task>
-    <option name="localTasksCounter" value="23" />
+    <task id="LOCAL-00023" summary="创建收藏">
+      <created>1584186650746</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1584186650746</updated>
+    </task>
+    <option name="localTasksCounter" value="24" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -1276,7 +1277,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="294975000" />
+    <option name="totallyTimeSpent" value="296009000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1356,7 +1357,8 @@
     <MESSAGE value="实现商品查询" />
     <MESSAGE value="实现单点登录系统" />
     <MESSAGE value="创建拦截器" />
-    <option name="LAST_COMMIT_MESSAGE" value="创建拦截器" />
+    <MESSAGE value="创建收藏" />
+    <option name="LAST_COMMIT_MESSAGE" value="创建收藏" />
   </component>
   <component name="WindowStateProjectService">
     <state x="223" y="68" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1581398274854">
@@ -1851,8 +1853,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/car4s-portal/src/main/webapp/js/cart.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="276">
-          <caret line="12" column="44" lean-forward="true" selection-start-line="12" selection-start-column="44" selection-end-line="12" selection-end-column="44" />
+        <state relative-caret-position="690">
+          <caret line="39" column="26" lean-forward="true" selection-start-line="39" selection-start-column="26" selection-end-line="39" selection-end-column="26" />
         </state>
       </provider>
     </entry>
