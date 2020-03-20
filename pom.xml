@@ -16,6 +16,7 @@
       <module>car4s-portal</module>
       <module>car4s-search</module>
       <module>car4s-sso</module>
+      <module>car4s-order</module>
   </modules>
   <packaging>pom</packaging>
 

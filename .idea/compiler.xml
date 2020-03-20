@@ -11,6 +11,7 @@
         <module name="car4s-manager-pojo" />
         <module name="car4s-manager-service" />
         <module name="car4s-manager-web" />
+        <module name="car4s-order" />
         <module name="car4s-portal" />
         <module name="car4s-rest" />
         <module name="car4s-search" />
@@ -27,6 +28,7 @@
       <module name="car4s-manager-pojo" target="1.7" />
       <module name="car4s-manager-service" target="1.7" />
       <module name="car4s-manager-web" target="1.7" />
+      <module name="car4s-order" target="1.7" />
       <module name="car4s-portal" target="1.7" />
       <module name="car4s-rest" target="1.7" />
       <module name="car4s-search" target="1.7" />

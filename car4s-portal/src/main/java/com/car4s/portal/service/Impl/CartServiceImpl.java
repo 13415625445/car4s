@@ -32,24 +32,27 @@ public class CartServiceImpl implements CartService {
         CartItem cartItem = null;
         List<CartItem> itemList = getCartItemList(request);
         for (CartItem item : itemList) {
-            if(item.getId() == itemId){
-                item.setNum((item.getNum()+num));
+            if (item.getId() == itemId) {
+                item.setNum((item.getNum() + num));
                 cartItem = item;
                 break;
             }
         }
-        String json = HttpClientUtil.doGet(REST_BASE_URL + ITEM_INFO_URL + itemId);
-        Car4sResult car4sResult = Car4sResult.formatToPojo(json, CartItem.class);
-        if(car4sResult.getStatus() == 200){
-            TbItem tbItem = (TbItem) car4sResult.getData();
-            cartItem.setId(tbItem.getId());
-            cartItem.setTitle((tbItem.getTitle()));
-            cartItem.setNum(tbItem.getNum());
-            cartItem.setPrice(tbItem.getPrice());
-            cartItem.setImage(tbItem.getImage() == null ? "" : tbItem.getImage().split(",")[0]);
+        if (cartItem == null) {
+            cartItem = new CartItem();
+            String json = HttpClientUtil.doGet(REST_BASE_URL + ITEM_INFO_URL + itemId);
+            Car4sResult car4sResult = Car4sResult.formatToPojo(json, TbItem.class);
+            if (car4sResult.getStatus() == 200) {
+                TbItem tbItem = (TbItem) car4sResult.getData();
+                cartItem.setId(tbItem.getId());
+                cartItem.setTitle((tbItem.getTitle()));
+                cartItem.setNum(tbItem.getNum());
+                cartItem.setPrice(tbItem.getPrice());
+                cartItem.setImage(tbItem.getImage() == null ? "" : tbItem.getImage().split(",")[0]);
+            }
+            itemList.add(cartItem);
         }
-        itemList.add(cartItem);
-        CookieUtil.setCookie(request,response,"TT_CART", JsonUtil.objectToJson(itemList), true);
+        CookieUtil.setCookie(request, response, "TT_CART", JsonUtil.objectToJson(itemList), true);
         return null;
     }
 
