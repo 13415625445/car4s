@@ -50,7 +50,7 @@ public class ItemCatServiceImpl implements ItemCatService {
 
                 arrayList.add(catNode);
                 count++;
-                if(count>=14){
+                if(parentId ==0&&count>=14){
                     break;
                 }
                 //如果是叶子节点

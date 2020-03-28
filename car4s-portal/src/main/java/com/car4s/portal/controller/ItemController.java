@@ -15,6 +15,10 @@ import org.springframework.web.bind.annotation.ResponseBody;
 /**
  * Created by 张少强
  */
+
+/**
+ * 商品详情
+ */
 @Controller
 public class ItemController {
 

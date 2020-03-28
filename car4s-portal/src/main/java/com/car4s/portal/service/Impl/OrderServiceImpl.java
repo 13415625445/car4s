@@ -6,10 +6,12 @@ import com.car4s.common.utils.JsonUtil;
 import com.car4s.portal.pojo.Order;
 import com.car4s.portal.service.OrderService;
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.stereotype.Service;
 
 /**
  * Created by 张少强
  */
+@Service
 public class OrderServiceImpl implements OrderService {
 
     @Value("${ORDER_BASE_URL}")
@@ -20,9 +22,9 @@ public class OrderServiceImpl implements OrderService {
     @Override
     public String createOrder(Order order) {
         String json = HttpClientUtil.doPostJson(ORDER_BASE_URL + ORDER_CREATE_URL, JsonUtil.objectToJson(order));
-        Car4sResult taotaoResult = Car4sResult.format(json);
-        if (taotaoResult.getStatus() == 200) {
-            Object orderId = taotaoResult.getData();
+        Car4sResult car4sResult = Car4sResult.format(json);
+        if (car4sResult.getStatus() == 200) {
+            Object orderId = car4sResult.getData();
             return orderId.toString();
         }
         return "";
