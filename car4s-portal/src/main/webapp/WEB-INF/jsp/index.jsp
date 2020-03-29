@@ -30,7 +30,7 @@
 <!-- header end -->
 <div class="w">
 <div id="o-slide">
-<div class="slide" id="slide">
+<div class="slide" id="slide" style="height: 1000px">
 <script type="text/javascript">
 ;(function(cfg, doc) {
     if ( !cfg.DATA_MSlide ) {
@@ -43,10 +43,10 @@
     if ( cfg.DATA_MSlide.length > 0 ) {
     	var first = pageConfig.FN_GetCompatibleData( cfg.DATA_MSlide[0] );
         var TPL = ''
-            +'<ul class="slide-items">'
-            +'<li clstag="homepage|keycount|home2013|09a1">'
+            +'<ul class="slide-items" style="height:402px;">'
+            +'<li clstag="homepage|keycount|home2013|09a1" style="height: 402px">'
             +'<a href="'+ first.href +'" target="_blank" title="'+ first.alt +'">'
-            +'<img src="'+ first.src +'" width="'+ first.width +'" height="'+ first.height +'" >'
+            +'<img src="'+ first.src +'" width="'+ first.width +'" height="'+ first.height +'">'
             +'</a>'
             +'</li>'
             +'</ul><div class="slide-controls"><span class="curr">1</span></div>';
