@@ -88,6 +88,18 @@
 								id="phone_error"></label>
 						</div>
 					</div>
+
+                    <div class="item" id="demail">
+                        <span class="label"><b class="ftx04">*</b>邮箱：</span>
+
+                        <div class="fl item-ifo">
+                            <input type="text" id="email" name="email"
+                                   class="text"
+                                   autocomplete="off" /><label
+                                id="email_succeed" class="blank"></label> <label
+                                id="email_error"></label>
+                        </div>
+                    </div>
 					</div>
                 <div class="item item-new">
                     <span class="label">&nbsp;</span>

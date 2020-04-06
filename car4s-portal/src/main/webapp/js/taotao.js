@@ -12,7 +12,7 @@ var TT = TAOTAO = {
 				if(data.status == 200){
 					var username = data.data.username;
 					var title = ',欢迎来到少强4S店!';
-					var url = '<a href="http://localhost:8083/user/logout/'+_ticket+'  class="link-logout">[退出]</a>';
+					var url = '<a href="http://localhost:8083/user/logout/' +_ticket+'" class="link-logout">[退出]</a>';
 					var html = username + title + url;
 					$("#loginbar").html(html);
 				}

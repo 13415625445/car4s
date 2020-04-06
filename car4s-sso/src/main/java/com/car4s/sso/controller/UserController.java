@@ -111,19 +111,18 @@ public class UserController {
     //根据token删除redis里面的用户信息
     @RequestMapping("/logout/{token}")
     @ResponseBody
-    public Object outLoginByToken(@PathVariable String token, String callback) {
+    public void outLoginByToken(@PathVariable String token, String callback, HttpServletResponse response) {
         Car4sResult result = null;
         try {
             result = userService.outLogin(token);
+            response.sendRedirect("http://localhost:8082");
         } catch (Exception e) {
             e.printStackTrace();
-            result = Car4sResult.build(500, ExceptionUtil.getStackTrace(e));
         }
-        if (!StringUtils.isBlank(callback)){
-            MappingJacksonValue mappingJacksonValue = new MappingJacksonValue(result);
-            mappingJacksonValue.setJsonpFunction(callback);
-            return mappingJacksonValue;
-        }
-        return result;
+//        if (!StringUtils.isBlank(callback)) {
+//            MappingJacksonValue mappingJacksonValue = new MappingJacksonValue(result);
+//            mappingJacksonValue.setJsonpFunction(callback);
+//            return mappingJacksonValue;
+//        }
     }
 }
