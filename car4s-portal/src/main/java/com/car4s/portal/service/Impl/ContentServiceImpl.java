@@ -41,9 +41,9 @@ public class ContentServiceImpl implements ContentService {
                 map.put("src", tbContent.getPic());
                 map.put("height", 402);
                 map.put("width", 670);
-                map.put("srcB", tbContent.getPic2());
-                map.put("widthB", 670);
-                map.put("heightB", 402);
+//                map.put("srcB", tbContent.getPic2());
+//                map.put("widthB", 670);
+//                map.put("heightB", 402);
                 map.put("href", tbContent.getUrl());
                 map.put("alt", tbContent.getSubTitle());
                 resultList.add(map);

@@ -21,6 +21,7 @@ public class ItemCatController {
     @Autowired
     private ItemCatService itemCatService;
 
+    //获取汽车分类信息
     @RequestMapping("/itemcat/list")
     @ResponseBody
     public Object getItemCatList(String callback){

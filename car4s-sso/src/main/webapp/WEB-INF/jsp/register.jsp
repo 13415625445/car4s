@@ -15,7 +15,7 @@
 <div class="w" id="logo">
     <div>
     	<a href="http://localhost:8082">
-    		<img src="/images/taotao-logo.gif" alt="淘淘商城" width="170" height="60"/>
+    		<img src="/images/logo.jpg" alt="少强4S店" width="170" height="150"/>
     	</a> <b></b>
     </div>
 </div>
@@ -78,7 +78,7 @@
                         </div>
                     </div>
 					<div class="item" id="dphone">
-						<span class="label"><b class="ftx04">*</b>验证手机：</span>
+						<span class="label"><b class="ftx04">*</b>手机号码：</span>
 
 						<div class="fl item-ifo">
 							<input type="text" id="phone" maxlength="11" name="phone"
@@ -95,7 +95,7 @@
                     <div class="fl item-ifo">
                         <input type="checkbox" class="checkbox" checked="checked" id="readme"
                                onclick="agreeonProtocol();">
-                        <label for="protocol">我已阅读并同意<a href="#" class="blue" id="protocol">《淘淘用户注册协议》</a></label>
+                        <label for="protocol">我已阅读并同意<a href="#" class="blue" id="protocol">《用户注册协议》</a></label>
                         <span class="clr"></span>
                         <label id="protocol_error" class="error hide">请接受服务条款</label>
                     </div>
@@ -106,9 +106,6 @@
                            clstag="regist|keycount|personalreg|07"
                            onclick="REGISTER.reg();"/>
                 </div>
-            </div>
-            <div class="phone">
-                <img width="180" height="180" src="/images/phone-bg.jpg">
             </div>
             <span class="clr"></span>
         </form>
