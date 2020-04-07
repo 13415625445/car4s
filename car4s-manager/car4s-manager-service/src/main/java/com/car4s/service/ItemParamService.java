@@ -1,6 +1,7 @@
 package com.car4s.service;
 
 import com.car4s.common.pojo.Car4sResult;
+import com.car4s.common.pojo.EUDataGridResult;
 import com.car4s.generator.pojo.TbItemParam;
 
 /**
@@ -9,4 +10,5 @@ import com.car4s.generator.pojo.TbItemParam;
 public interface ItemParamService {
     Car4sResult getItemParamByCid(Long itemCatId);
     Car4sResult insertItemParam(TbItemParam itemParam);
+    EUDataGridResult getItemParamList(Integer page, Integer rows);
 }

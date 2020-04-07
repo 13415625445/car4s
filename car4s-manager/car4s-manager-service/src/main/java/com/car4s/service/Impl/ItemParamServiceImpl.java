@@ -1,10 +1,14 @@
 package com.car4s.service.Impl;
 
 import com.car4s.common.pojo.Car4sResult;
+import com.car4s.common.pojo.EUDataGridResult;
 import com.car4s.generator.mapper.TbItemParamMapper;
+import com.car4s.generator.pojo.TbItem;
 import com.car4s.generator.pojo.TbItemParam;
 import com.car4s.generator.pojo.TbItemParamExample;
 import com.car4s.service.ItemParamService;
+import com.github.pagehelper.PageHelper;
+import com.github.pagehelper.PageInfo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -48,5 +52,17 @@ public class ItemParamServiceImpl implements ItemParamService {
         itemParam.setUpdated(new Date());
         tbItemParamMapper.insert(itemParam);
         return Car4sResult.ok();
+    }
+
+    @Override
+    public EUDataGridResult getItemParamList(Integer page, Integer rows) {
+        TbItemParamExample tbItemExample = new TbItemParamExample();
+        PageHelper.startPage(page,rows);
+        List<TbItemParam> tbItemParams = tbItemParamMapper.selectByExample(tbItemExample);
+        EUDataGridResult euDataGridResult = new EUDataGridResult();
+        PageInfo<TbItemParam> pageInfo = new PageInfo<>(tbItemParams);
+        euDataGridResult.setTotal(pageInfo.getTotal());
+        euDataGridResult.setRows(tbItemParams);
+        return euDataGridResult;
     }
 }

@@ -1,6 +1,7 @@
 package com.car4s.controller;
 
 import com.car4s.common.pojo.Car4sResult;
+import com.car4s.common.pojo.EUDataGridResult;
 import com.car4s.generator.pojo.TbItemParam;
 import com.car4s.service.ItemParamService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -24,6 +25,14 @@ public class ItemParamController {
     public Car4sResult getItemParamByCid(@PathVariable Long cid) throws Exception {
         //根据分类id查询列表
         Car4sResult result = itemParamService.getItemParamByCid(cid);
+        return result;
+    }
+
+    //获取车辆列表
+    @RequestMapping("/list")
+    @ResponseBody
+    public EUDataGridResult getItemList(Integer page, Integer rows){
+        EUDataGridResult result = itemParamService.getItemParamList(page, rows);
         return result;
     }
 

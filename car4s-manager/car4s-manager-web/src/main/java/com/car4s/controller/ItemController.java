@@ -20,7 +20,7 @@ public class ItemController {
     @Autowired
     private ItemService itemService;
 
-    //根据id获得车型
+    //根据id获得车辆
     @RequestMapping("/item/{itemId}")
     @ResponseBody
     public TbItem getItemById(@PathVariable Long itemId){
@@ -28,7 +28,7 @@ public class ItemController {
         return tbItem;
     }
 
-    //获取车型列表
+    //获取车辆列表
     @RequestMapping("/item/list")
     @ResponseBody
     public EUDataGridResult getItemList(Integer page,Integer rows){
@@ -36,7 +36,7 @@ public class ItemController {
         return result;
     }
 
-    //保存车型
+    //保存车辆
     @RequestMapping(value = "/item/save",method = RequestMethod.POST)
     @ResponseBody
     public Car4sResult createItem(TbItem tbItem, String desc,String itemParams) throws Exception {
