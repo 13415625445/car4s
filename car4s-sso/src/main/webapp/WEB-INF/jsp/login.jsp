@@ -81,7 +81,7 @@
 						if (redirectUrl == "") {
 							location.href = "http://localhost:8082";
 						} else {
-							location.href = redirectUrl;
+                            location.href = "http://localhost:8082" + redirectUrl;
 						}
 					} else {
 						alert("登录失败，原因是：" + data.msg);

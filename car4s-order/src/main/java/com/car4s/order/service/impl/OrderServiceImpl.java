@@ -4,9 +4,7 @@ import com.car4s.common.pojo.Car4sResult;
 import com.car4s.generator.mapper.TbOrderItemMapper;
 import com.car4s.generator.mapper.TbOrderMapper;
 import com.car4s.generator.mapper.TbOrderShippingMapper;
-import com.car4s.generator.pojo.TbOrder;
-import com.car4s.generator.pojo.TbOrderItem;
-import com.car4s.generator.pojo.TbOrderShipping;
+import com.car4s.generator.pojo.*;
 import com.car4s.order.dao.JedisClient;
 import com.car4s.order.service.OrderService;
 import org.apache.commons.lang3.StringUtils;
@@ -14,6 +12,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 
+import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
@@ -30,9 +29,6 @@ public class OrderServiceImpl implements OrderService {
     private TbOrderItemMapper orderItemMapper;
 
     @Autowired
-    private TbOrderShippingMapper orderShippingMapper;
-
-    @Autowired
     private JedisClient jedisClient;
 
     @Value("${ORDER_GEN_KEY}")
@@ -44,8 +40,9 @@ public class OrderServiceImpl implements OrderService {
     @Value("${ORDER_DETAIL_GEN_KEY}")
     private String ORDER_DETAIL_GEN_KEY;
 
+
     @Override
-    public Car4sResult createOrder(TbOrder order, List<TbOrderItem> itemList, TbOrderShipping orderShipping) {
+    public Car4sResult createOrder(TbOrder order, List<TbOrderItem> itemList) {
         String string = jedisClient.get(ORDER_GEN_KEY);
         if(StringUtils.isBlank(string)){
             jedisClient.set(ORDER_GEN_KEY, ORDER_INIT_ID);
@@ -65,11 +62,25 @@ public class OrderServiceImpl implements OrderService {
             orderItem.setOrderId(orderId+"");
             orderItemMapper.insert(orderItem);
         }
-        orderShipping.setOrderId(orderId + "");
-        orderShipping.setCreated(new Date());
-        orderShipping.setUpdated(new Date());
-        orderShippingMapper.insert(orderShipping);
-
         return Car4sResult.ok(orderId);
+    }
+
+    @Override
+    public Car4sResult showOrder(TbUser user) {
+        TbOrderExample tbOrderExample = new TbOrderExample();
+        TbOrderExample.Criteria orderExampleCriteria = tbOrderExample.createCriteria();
+        orderExampleCriteria.andUserIdEqualTo(user.getId());
+        List<TbOrder> orders = orderMapper.selectByExample(tbOrderExample);
+        List<TbOrderItem> tbOrderItems = new ArrayList<>();
+        for (TbOrder order : orders) {
+            TbOrderItemExample tbOrderItemExample = new TbOrderItemExample();
+            TbOrderItemExample.Criteria tbOrderItemExampleCriteria = tbOrderItemExample.createCriteria();
+            tbOrderItemExampleCriteria.andOrderIdEqualTo(order.getOrderId());
+            List<TbOrderItem> tbOrderItems1 = orderItemMapper.selectByExample(tbOrderItemExample);
+            for (TbOrderItem tbOrderItem : tbOrderItems1) {
+                tbOrderItems.add(tbOrderItem);
+            }
+        }
+        return Car4sResult.ok(tbOrderItems);
     }
 }

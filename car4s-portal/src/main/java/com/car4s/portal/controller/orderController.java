@@ -1,6 +1,7 @@
 package com.car4s.portal.controller;
 
 import com.car4s.common.utils.ExceptionUtil;
+import com.car4s.generator.pojo.TbOrderItem;
 import com.car4s.generator.pojo.TbUser;
 import com.car4s.portal.pojo.CartItem;
 import com.car4s.portal.pojo.Order;
@@ -34,6 +35,13 @@ public class orderController {
         List<CartItem> list = cartService.getCartItemList(request, response);
         model.addAttribute("cartList", list);
         return "order-cart";
+    }
+
+    @RequestMapping("/show")
+    public String showOrder(HttpServletRequest request, HttpServletResponse response, Model model) {
+        List<TbOrderItem> list = orderService.getOrderList(request, response);
+        model.addAttribute("orderList", list);
+        return "order-information";
     }
 
     @RequestMapping("/create")

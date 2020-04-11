@@ -13,7 +13,7 @@
 	href="/css/base.css">
 <link href="/css/initcart20150123.css" type="text/css"
 	rel="stylesheet">
-<title>商品已成功加入购物车</title>
+<title>车辆已成功加入收藏</title>
 <style id="style-1-cropbar-clipper">
 /* Copyright 2014 Evernote Corporation. All rights reserved. */
 .en-markup-crop-options {
@@ -44,13 +44,13 @@
 				<div class="corner br"></div>
 				<div class="success">
 					<div class="success-b">
-						<h3>商品已成功加入购物车！</h3>
-						<span id="flashBuy" style="display: none">商品数量有限，请您尽快下单并付款！</span>
+						<h3>车辆已成功加入收藏！</h3>
+						<span id="flashBuy" style="display: none">车辆数目有限，请您尽快预约试车！</span>
 					</div>
 					<span id="initCart_next_go"> <a class="btn-1"
 						href="/cart/cart.html"
-						id="GotoShoppingCart">去购物车结算</a> <span class="ml10">您还可以 <a
-							class="ftx-05" href="javascript:history.back();">继续购物</a></span>
+						id="GotoShoppingCart">去收藏中心预约</a> <span class="ml10">您还可以 <a
+							class="ftx-05" href="javascript:history.back();">继续浏览</a></span>
 					</span>
 				</div>
 			</div>

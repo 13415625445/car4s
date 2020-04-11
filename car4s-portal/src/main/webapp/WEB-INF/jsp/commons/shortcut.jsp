@@ -8,7 +8,7 @@
 			<li class="fore1" id="loginbar" clstag="homepage|keycount|home2013|01b">您好！欢迎来到少强4S店！<a href="javascript:login()">[登录]</a>&nbsp;<a href="javascript:regist()">[免费注册]</a></li>
 			<li class="fore2 ld" clstag="homepage|keycount|home2013|01c">
 				<s></s>
-				<a href="http://jd2008.jd.com/JdHome/OrderList.aspx" rel="nofollow">我的预约</a>
+				<a href="/order/show.html" rel="nofollow">我的预约</a>
 			</li>
 			<li class="fore4 ld menu" id="biz-service" data-widget="dropdown" clstag="homepage|keycount|home2013|01e">
 				<s></s>
