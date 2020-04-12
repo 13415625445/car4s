@@ -55,7 +55,7 @@ public class ItemCatServiceImpl implements ItemCatService {
                 }
                 //如果是叶子节点
             } else {
-                arrayList.add("/products/"+tbItemCat.getId()+".html|" + tbItemCat.getName());
+                arrayList.add("/search.html?q=" + tbItemCat.getName() + "|" + tbItemCat.getName());
             }
         }
         return arrayList;

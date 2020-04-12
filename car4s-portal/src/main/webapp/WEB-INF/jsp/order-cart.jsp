@@ -40,13 +40,6 @@
 		<input type="hidden" name="orderItems[${status.index}].title" value="${cart.title}"/>
 		<input type="hidden" name="orderItems[${status.index}].picPath" value="${cart.image}"/>
 	</c:forEach>
-	<input type="hidden" name="payment" value="<fmt:formatNumber groupingUsed="false" maxFractionDigits="2" minFractionDigits="2" value="${totalPrice/100 }"/>"/>
-	<input type="hidden" name="orderShipping.receiverName" value="入云龙"/>
-	<input type="hidden" name="orderShipping.receiverMobile" value="15891588888"/>
-	<input type="hidden" name="orderShipping.receiverState" value="北京"/>
-	<input type="hidden" name="orderShipping.receiverCity" value="北京"/>
-	<input type="hidden" name="orderShipping.receiverDistrict" value="昌平区"/>
-	<input type="hidden" name="orderShipping.receiverAddress" value="西三旗 xxxxxxxxx"/>
 </form>
 
 <!-- main -->
@@ -54,7 +47,7 @@
 	<div id="content" class="w">
 		<div class="m">
 			<div class="mt">
-				<h2>填写并核对预约信息</h2>
+				<h2>核对预约信息</h2>
 			</div>
 			<div class="mc">
 				<div class="checkout-steps">
@@ -64,8 +57,6 @@
 					</div>
 					<div class="step-cont">
 						<div class="consignee-list" id="consignee-list1">
-							<a href="#none" id="prev" class="prev arrow-btns"></a>
-							<a href="#none" id="next" class="next arrow-btns"></a>
 							<div id="consignee1" class="list-cont ui-switchable-body">
 								<div id="consignee-ret"></div>
 								<ul class="ui-switchable-panel-main" id="consignee-list">
@@ -77,24 +68,17 @@
 											<b></b>
 											<div class="user-name">
 												<div class="fl">
-													<strong limit="4">入云龙</strong>&nbsp;&nbsp;收
+													<strong limit="4">${user.username}</strong>&nbsp;&nbsp;
 												</div>
-												<div class="fr">158****8888</div>
-												<div class="clr"></div>
 											</div>
-											<div class="mt10" limit="15">北京 昌平区 五环外六环里</div>
-											<div class="adr-m" limit="30">西三旗 xxxxxxxxx</div>
-											<div class="op-btns ar">
-												<a href="#none"
-												   class="ftx-05 mr10 setdefault-consignee hide"
-												   fid="137617472">设为默认地址</a> <a href="#none"
-																				 class="ftx-05 mr10 edit-consignee" fid="137617472">编辑</a>
-												<a href="#none" class="ftx-05 del-consignee hide"
-												   fid="137617472">删除</a>
+											<div class="user-name">
+												<div class="fl">
+													<strong limit="4">${user.phone}</strong>&nbsp;&nbsp;
+												</div>
 											</div>
+											<div class="adr-m">${user.email}</div>
 										</div>
 									</li>
-									<!---->
 								</ul>
 							</div>
 						</div>
@@ -108,7 +92,7 @@
 							<div class="step-tit">
 								<h3>预约车辆</h3>
 								<div class="extra-r">
-									<a href="/cart/cart.html" id="cartRetureUrl" class="return-edit ftx-05">返回购物车</a>
+									<a href="/cart/cart.html" id="cartRetureUrl" class="return-edit ftx-05">返回收藏</a>
 								</div>
 							</div>
 							<div class="step-cont" id="skuPayAndShipment-cont">
@@ -179,7 +163,7 @@
 							<div class="inner">
 								<button type="submit" class="checkout-submit btn-1"
 										id="order-submit"	onclick="$('#orderForm').submit()">
-									提交订单
+									发起预约
 								</button>
 								<span class="total">预计金额：<strong id="payPriceId">￥<fmt:formatNumber value="${totalPrice / 100}" maxFractionDigits="2" minFractionDigits="2" groupingUsed="true"/></strong>
           </span>

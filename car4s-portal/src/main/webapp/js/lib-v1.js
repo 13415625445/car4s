@@ -1181,7 +1181,7 @@ var category = {OBJ: $("#_JD_ALLSORT"),
 	            case 2:
 	                c = b.split("|")[0], d = b.split("|")[1]
 	        }
-        return "" == c ? d : (/^http[s]?:\/\/([\w-]+\.)+[\w-]+([\w-.\/?%&=]*)?$/.test(c) || (c = c.replace(/-000$/, ""), c = c.match(/^\d*-\d*$/) ? "http://channel.jd.com/" + c + ".html" : "http://www.taotao.com" + c + ".html"), '<a href="' + c + '">' + d + "</a>")
+        return "" == c ? d : (/^http[s]?:\/\/([\w-]+\.)+[\w-]+([\w-.\/?%&=]*)?$/.test(c) || (c = c.replace(/-000$/, ""), c = c.match(/^\d*-\d*$/) ? "http://channel.jd.com/" + c + ".html" : "http://localhost:8082" + c), '<a href="' + c + '">' + d + "</a>")
     },FN_SetLink: function(a) {
         var b = "", c = pageConfig.isHome ? 'clstag="homepage|keycount|home2013|0604e"' : "", d = pageConfig.isHome ? 'clstag="homepage|keycount|home2013|0603e"' : "", e = pageConfig.isHome ? 'clstag="homepage|keycount|home2013|0605e"' : "";
         switch (a) {

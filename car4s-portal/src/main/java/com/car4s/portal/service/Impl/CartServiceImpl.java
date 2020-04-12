@@ -5,8 +5,11 @@ import com.car4s.common.utils.CookieUtil;
 import com.car4s.common.utils.HttpClientUtil;
 import com.car4s.common.utils.JsonUtil;
 import com.car4s.generator.pojo.TbItem;
+import com.car4s.generator.pojo.TbUser;
 import com.car4s.portal.pojo.CartItem;
 import com.car4s.portal.service.CartService;
+import com.car4s.portal.service.UserService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 
@@ -26,6 +29,9 @@ public class CartServiceImpl implements CartService {
 
     @Value("${ITEM_INFO_URL}")
     private String ITEM_INFO_URL;
+
+    @Autowired
+    private UserServiceImpl userService;
 
     @Override
     public Car4sResult addCartItem(long itemId, int num, HttpServletRequest request, HttpServletResponse response) {
@@ -113,5 +119,12 @@ public class CartServiceImpl implements CartService {
         //把购物车列表重新写入cookie
         CookieUtil.setCookie(request, response, "TT_CART", JsonUtil.objectToJson(itemList), true);
         return Car4sResult.ok();
+    }
+
+    @Override
+    public TbUser findCurrentUser(HttpServletRequest request) {
+        String token = CookieUtil.getCookieValue(request, "TT_TOKEN");
+        TbUser user = userService.getUserByToken(token);
+        return user;
     }
 }

@@ -33,7 +33,9 @@ public class orderController {
     @RequestMapping("/order-cart")
     public String showOrderCart(HttpServletRequest request, HttpServletResponse response, Model model) {
         List<CartItem> list = cartService.getCartItemList(request, response);
+        TbUser user = cartService.findCurrentUser(request);
         model.addAttribute("cartList", list);
+        model.addAttribute("user", user);
         return "order-cart";
     }
 

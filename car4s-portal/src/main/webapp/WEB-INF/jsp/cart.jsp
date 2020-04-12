@@ -100,7 +100,7 @@
           <div class="cart-total-2014">
               <div class="cart-button">
                   <span class="check-comm-btns" id="checkout-jd">
-                      <a class="checkout" href="/order/order-cart.html" clstag="clickcart|keycount|xincart|gotoOrderInfo" id="toSettlement">去结算<b></b></a>
+                      <a class="cart-button" href="/order/order-cart.html"  id="toSettlement"><h2>去预约</h2><b></b></a>
                   </span>
               </div>
               <div class="total fr">
