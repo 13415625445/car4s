@@ -48,8 +48,8 @@
 					<li class="fore2" id="nav-fashion" clstag="homepage|keycount|home2013|07b"><a href="http://localhost:8082/search.html?q=三">三厢车</a></li>
 					<li class="fore3" id="nav-chaoshi" clstag="homepage|keycount|home2013|07c"><a href="http://localhost:8082/search.html?q=两">两厢车</a></li>
 					<li class="fore4" id="nav-tuan" clstag="homepage|keycount|home2013|07d"><a href="http://localhost:8082/search.html?q=S" target="_blank">SUV</a></li>
-					<li class="fore5" id="nav-auction" clstag="homepage|keycount|home2013|07e"><a href="http://auction.jd.com/">推荐</a></li>
-					<li class="fore6" id="nav-shan" clstag="homepage|keycount|home2013|07f"><a href="http://red.jd.com/" target="_blank">对比车辆</a></li>
+					<li class="fore5" id="nav-auction" clstag="homepage|keycount|home2013|07e"><a href="http://localhost:8082/recommend.html">推荐</a></li>
+					<li class="fore6" id="nav-shan" clstag="homepage|keycount|home2013|07f"><a href="http://localhost:8082/contrast/show.html" target="_blank">对比车辆</a></li>
 				</ul>
 		</div>
 	</div>

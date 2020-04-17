@@ -18,7 +18,7 @@ public class ItemController {
     @Autowired
     private ItemService itemService;
 
-    //获取商品基本信息
+    //获取车辆基本信息
     @RequestMapping("/info/{itemId}")
     @ResponseBody
     public Car4sResult getItemBaseInfo(@PathVariable Long itemId) {
@@ -26,7 +26,7 @@ public class ItemController {
         return result;
     }
 
-    //获取商品描述信息
+    //获取车辆描述信息
     @RequestMapping("/desc/{itemId}")
     @ResponseBody
     public Car4sResult getItemDescInfo(@PathVariable Long itemId) {
@@ -34,7 +34,7 @@ public class ItemController {
         return result;
     }
 
-    //获取商品规格信息
+    //获取车辆规格信息
     @RequestMapping("/param/{itemId}")
     @ResponseBody
     public Car4sResult getItemParamInfo(@PathVariable Long itemId) {
@@ -42,4 +42,11 @@ public class ItemController {
         return result;
     }
 
+    //获取车辆基本信息
+    @RequestMapping("/all")
+    @ResponseBody
+    public Car4sResult getItemBaseInfo() {
+        Car4sResult result = itemService.getAllItem();
+        return result;
+    }
 }

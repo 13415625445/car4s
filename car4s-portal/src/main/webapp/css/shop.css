@@ -1,0 +1,21 @@
+.content .good-list{
+    list-style: none;
+}
+
+.content .good-list img{
+    width: 300px;
+    height: 200px;
+}
+
+.content .good-list span{
+    margin-left: 20px;
+}
+
+.content .good-list li{
+    min-width: 280px;
+}
+
+.content .good-list .price{
+    text-align: right;
+    color: black;
+}

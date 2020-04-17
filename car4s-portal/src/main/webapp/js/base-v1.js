@@ -7,6 +7,9 @@ function login() {
 function regist() {
     return location.href = "http://localhost:8083/page/register";
 }
+ function information() {
+     return location.href = "http://localhost:8083/user/show";
+ }
 function createCookie(a, b, c, d) {
     var d = d ? d : "/";
     if (c) {

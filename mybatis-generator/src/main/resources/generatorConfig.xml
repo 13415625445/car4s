@@ -47,16 +47,16 @@
             <property name="enableSubPackages" value="false" />
         </javaClientGenerator>
         <!-- 指定数据库表 -->
-        <table schema="" tableName="tb_content"></table>
-        <table schema="" tableName="tb_content_category"></table>
-        <table schema="" tableName="tb_item"></table>
-        <table schema="" tableName="tb_item_cat"></table>
-        <table schema="" tableName="tb_item_desc"></table>
-        <table schema="" tableName="tb_item_param"></table>
-        <table schema="" tableName="tb_item_param_item"></table>
-        <table schema="" tableName="tb_order"></table>
-        <table schema="" tableName="tb_order_item"></table>
-        <table schema="" tableName="tb_order_shipping"></table>
+        <!--<table schema="" tableName="tb_content"></table>-->
+        <!--<table schema="" tableName="tb_content_category"></table>-->
+        <!--<table schema="" tableName="tb_item"></table>-->
+        <!--<table schema="" tableName="tb_item_cat"></table>-->
+        <!--<table schema="" tableName="tb_item_desc"></table>-->
+        <!--<table schema="" tableName="tb_item_param"></table>-->
+        <!--<table schema="" tableName="tb_item_param_item"></table>-->
+        <!--<table schema="" tableName="tb_order"></table>-->
+        <!--<table schema="" tableName="tb_order_item"></table>-->
+        <!--<table schema="" tableName="tb_order_shipping"></table>-->
         <table schema="" tableName="tb_user"></table>
 
     </context>

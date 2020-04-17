@@ -1,0 +1,32 @@
+.list li{
+    margin-top: 10px;
+    /* background-color:red; */
+    min-height:200px;
+    list-style: none;
+}
+
+.list li .left{
+    margin-top: 10px;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.list li .left img{
+    width: 100px;
+    height: 100px;
+}
+
+.list li .right{
+    min-width: 100px;
+}
+.list li .right .content{
+    margin-top: 10px;
+    min-height:100px;
+}
+
+.list li .right .time{
+    float: right;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    display: block;
+}

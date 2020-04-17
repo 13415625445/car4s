@@ -7,6 +7,7 @@ import com.car4s.generator.mapper.TbItemMapper;
 import com.car4s.generator.mapper.TbItemParamItemMapper;
 import com.car4s.generator.mapper.TbItemParamMapper;
 import com.car4s.generator.pojo.*;
+import com.car4s.rest.dao.ItemDao;
 import com.car4s.rest.dao.JedisClient;
 import com.car4s.rest.service.ItemService;
 import org.apache.commons.lang3.StringUtils;
@@ -44,7 +45,7 @@ public class ItemServiceImpl implements ItemService {
     public Car4sResult getItemBaseInfo(long itemId) {
         try {
             String json = jedisClient.get(REDIS_ITEM_KEY + ":" + itemId + ":base");
-            if(!StringUtils.isBlank(json)){
+            if(json == null || json == "null" || json == ""){
                 TbItem item = JsonUtil.jsonToPojo(json, TbItem.class);
                 return Car4sResult.ok(item);
             }
@@ -110,5 +111,12 @@ public class ItemServiceImpl implements ItemService {
             return Car4sResult.ok(itemParamItem);
         }
         return Car4sResult.build(400,"无此商品信息");
+    }
+
+    @Override
+    public Car4sResult getAllItem() {
+        TbItemExample tbItemExample = new TbItemExample();
+        List<TbItem> items = itemMapper.selectByExample(tbItemExample);
+        return Car4sResult.ok(items);
     }
 }

@@ -1,6 +1,7 @@
 package com.car4s.sso.controller;
 
 import com.car4s.common.pojo.Car4sResult;
+import com.car4s.common.utils.CookieUtil;
 import com.car4s.common.utils.ExceptionUtil;
 import com.car4s.generator.pojo.TbUser;
 import com.car4s.sso.service.UserService;
@@ -8,6 +9,7 @@ import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.converter.json.MappingJacksonValue;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -15,6 +17,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import java.io.IOException;
 
 /**
  * Created by 张少强
@@ -124,5 +127,30 @@ public class UserController {
 //            mappingJacksonValue.setJsonpFunction(callback);
 //            return mappingJacksonValue;
 //        }
+    }
+
+    @RequestMapping("/show")
+    public String showUser(HttpServletRequest request, HttpServletResponse response, Model model) throws IOException {
+        String token = CookieUtil.getCookieValue(request, "TT_TOKEN");
+        Car4sResult car4sResult = userService.getUserByToken(token);
+        if(car4sResult.getStatus() == 200){
+            TbUser user = (TbUser) car4sResult.getData();
+            if(user == null){
+                response.sendRedirect("http://localhost:8083/page/login");
+            }else {
+                model.addAttribute("user", user);
+            }
+            return "my-info";
+        }
+        return "login";
+    }
+
+    //修改用户信息
+    @RequestMapping("/update")
+    @ResponseBody
+    public Car4sResult updateUser(TbUser user)
+    {
+        Car4sResult car4sResult = userService.updateUser(user);
+        return car4sResult;
     }
 }

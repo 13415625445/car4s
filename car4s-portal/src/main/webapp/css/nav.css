@@ -1,0 +1,47 @@
+*{
+    /* font-family: 'Courier New', Courier, monospace; */
+    font-size: 14px;
+    padding: 0;
+    margin: 0;
+}
+
+
+
+
+
+.carousel img{
+    width: 100%;
+}
+
+
+
+
+/* 尾部 */
+.footer{
+    background: url(#) no-repeat;
+    background-size: cover;
+    background-position: center top;
+    margin-top: -300px;
+    padding-top: 350px;
+    padding-bottom: 45px;
+}
+.footer>div>ul {
+    padding: 25px 5px;
+    background-color: rgba(255, 255, 255, 0.4);
+    list-style: none;
+}
+.footer>div>ul>li>h5 {
+    font-weight: 800;
+    color: rgb(85, 79, 79);
+}
+.footer>div>ul>li>p {
+    font-size: 13px;
+}
+
+
+
+
+
+
+
+

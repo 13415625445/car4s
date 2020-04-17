@@ -10,6 +10,10 @@
 				<s></s>
 				<a href="/order/show.html" rel="nofollow">我的预约</a>
 			</li>
+			<li class="fore2 ld" clstag="homepage|keycount|home2013|01c">
+				<s></s>
+				<a href="javascript:information()">个人信息中心</a>
+			</li>
 			<li class="fore4 ld menu" id="biz-service" data-widget="dropdown" clstag="homepage|keycount|home2013|01e">
 				<s></s>
 				<span class="outline"></span>

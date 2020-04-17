@@ -2,6 +2,7 @@ package com.car4s.portal.service;
 
 import com.car4s.generator.pojo.TbUser;
 
+
 /**
  * Created by 张少强
  */
@@ -12,5 +13,4 @@ public interface UserService {
      * @return
      */
     TbUser getUserByToken(String token);
-
 }

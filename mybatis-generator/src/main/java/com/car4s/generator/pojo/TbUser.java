@@ -17,6 +17,8 @@ public class TbUser {
 
     private Date updated;
 
+    private String favoriteModel;
+
     public Long getId() {
         return id;
     }
@@ -71,5 +73,13 @@ public class TbUser {
 
     public void setUpdated(Date updated) {
         this.updated = updated;
+    }
+
+    public String getFavoriteModel() {
+        return favoriteModel;
+    }
+
+    public void setFavoriteModel(String favoriteModel) {
+        this.favoriteModel = favoriteModel == null ? null : favoriteModel.trim();
     }
 }

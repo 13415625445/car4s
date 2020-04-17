@@ -564,6 +564,76 @@ public class TbUserExample {
             addCriterion("updated not between", value1, value2, "updated");
             return (Criteria) this;
         }
+
+        public Criteria andFavoriteModelIsNull() {
+            addCriterion("favorite_model is null");
+            return (Criteria) this;
+        }
+
+        public Criteria andFavoriteModelIsNotNull() {
+            addCriterion("favorite_model is not null");
+            return (Criteria) this;
+        }
+
+        public Criteria andFavoriteModelEqualTo(String value) {
+            addCriterion("favorite_model =", value, "favoriteModel");
+            return (Criteria) this;
+        }
+
+        public Criteria andFavoriteModelNotEqualTo(String value) {
+            addCriterion("favorite_model <>", value, "favoriteModel");
+            return (Criteria) this;
+        }
+
+        public Criteria andFavoriteModelGreaterThan(String value) {
+            addCriterion("favorite_model >", value, "favoriteModel");
+            return (Criteria) this;
+        }
+
+        public Criteria andFavoriteModelGreaterThanOrEqualTo(String value) {
+            addCriterion("favorite_model >=", value, "favoriteModel");
+            return (Criteria) this;
+        }
+
+        public Criteria andFavoriteModelLessThan(String value) {
+            addCriterion("favorite_model <", value, "favoriteModel");
+            return (Criteria) this;
+        }
+
+        public Criteria andFavoriteModelLessThanOrEqualTo(String value) {
+            addCriterion("favorite_model <=", value, "favoriteModel");
+            return (Criteria) this;
+        }
+
+        public Criteria andFavoriteModelLike(String value) {
+            addCriterion("favorite_model like", value, "favoriteModel");
+            return (Criteria) this;
+        }
+
+        public Criteria andFavoriteModelNotLike(String value) {
+            addCriterion("favorite_model not like", value, "favoriteModel");
+            return (Criteria) this;
+        }
+
+        public Criteria andFavoriteModelIn(List<String> values) {
+            addCriterion("favorite_model in", values, "favoriteModel");
+            return (Criteria) this;
+        }
+
+        public Criteria andFavoriteModelNotIn(List<String> values) {
+            addCriterion("favorite_model not in", values, "favoriteModel");
+            return (Criteria) this;
+        }
+
+        public Criteria andFavoriteModelBetween(String value1, String value2) {
+            addCriterion("favorite_model between", value1, value2, "favoriteModel");
+            return (Criteria) this;
+        }
+
+        public Criteria andFavoriteModelNotBetween(String value1, String value2) {
+            addCriterion("favorite_model not between", value1, value2, "favoriteModel");
+            return (Criteria) this;
+        }
     }
 
     public static class Criteria extends GeneratedCriteria {

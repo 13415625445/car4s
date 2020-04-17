@@ -14,4 +14,7 @@ public interface ItemService {
 
     //获取规格参数
     Car4sResult getItemParamInfo(long itemId);
+
+    //全部车辆
+    Car4sResult getAllItem();
 }

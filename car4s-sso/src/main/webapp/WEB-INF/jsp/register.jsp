@@ -77,6 +77,17 @@
                             <label id="pwdRepeat_error"></label>
                         </div>
                     </div>
+                    <div class="item" id="dfavoriteModel">
+                        <span class="label"><b class="ftx04">*</b>喜好：</span>
+                        <div class="fl item-ifo">
+                            <select id="favorite_model" class="easyui-combobox" name="favoriteModel"  style="height:40px;width:270px;">
+                                <option>两厢</option>
+                                <option>三厢</option>
+                                <option>SUV</option>
+                                <option>新能源</option>
+                            </select>
+                        </div>
+                    </div>
 					<div class="item" id="dphone">
 						<span class="label"><b class="ftx04">*</b>手机号码：</span>
 
@@ -152,6 +163,12 @@
 					$("#pwdRepeat").focus();
 					return false;
 				}
+				//喜好检查
+                if ($("#favoriteModel").val() == "") {
+                    alert("喜好不能为空");
+                    $("#favoriteModel").focus();
+                    return false;
+                }
 				return true;
 		},
 		beforeSubmit:function() {

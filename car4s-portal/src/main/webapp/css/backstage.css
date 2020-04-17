@@ -1,0 +1,31 @@
+@media screen and (min-width: 900px) {
+    .side-nav{
+        margin-top: 50px;
+        height:100%;
+    }
+    .side-nav .row a{
+        width: 150px;
+        height: 40px;
+    }
+    .side-nav .side-box{
+        position: fixed;
+    }
+}
+
+@media screen and (max-width: 900px) {
+    .side-nav{
+        display: none;
+    }
+
+}
+.content .tea .row img{
+    width:100px;
+    height: 70px;
+}
+.content .tea-set .row img{
+    width:100px;
+    height: 70px;
+}
+.content .row{
+    margin-top:20px;
+}

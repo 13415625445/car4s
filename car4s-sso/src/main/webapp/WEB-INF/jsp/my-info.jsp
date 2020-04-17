@@ -15,7 +15,7 @@
 <div  id="logo">
     <div>
         <a href="http://localhost:8082">
-            <img src="/images/tubiao.jpg" alt="少强4S店" width="170" height="150"/>
+            <img src="/images/logo.jpg" alt="少强4S店" width="170" height="150"/>
         </a>
     </div>
 </div>
@@ -30,6 +30,9 @@
     </div>
     <div class="mc">
         <form id="personRegForm" method="post" onsubmit="return false;">
+            <div>
+                <input name="id" value="${user.id}" style="visibility:hidden"/>
+            </div>
             <div class="form" onselectstart="return false;">
                 <div class="item" id="select-regName">
                     <span class="label"><b class="ftx04">*</b>用户名：</span>
@@ -50,21 +53,17 @@
                 <div id="o-password">
                     <div class="item">
                         <span class="label"><b class="ftx04">*</b>密码：</span>
-
                         <style>
                             .input-disabled{
                                 display: none;
                             }
                         </style>
-
                         <div class="fl item-ifo">
-                            <input id="pwd" type="password"  value="${user.password}"  name="password" class="text password-input input-disabled" tabindex="2"
-                                   style="ime-mode:disabled;"
+                            <input id="pwd" type="password" name="password" class="text password-input input-disabled" tabindex="2"
                                    onpaste="return  false" autocomplete="off"/>
                             <i class="i-pass"></i>
                             <label id="pwd_succeed" class="blank"></label>
                             <label id="pwd_error"></label>
-                            <span class="clr"></span>
                         </div>
                     </div>
 
@@ -72,7 +71,7 @@
                         <span class="label"><b class="ftx04">*</b>确认密码：</span>
 
                         <div class="fl item-ifo">
-                            <input type="password"  id="pwdRepeat" name="pwdRepeat" class="text password-input input-disabled" tabindex="3"
+                            <input type="password"  id="pwdRepeat" name="pwdRepeat" class="text password-input input-disabled" tabindex="2"
                                    onpaste="return  false" autocomplete="off"/>
                             <i class="i-pass"></i>
                             <label id="pwdRepeat_succeed" class="blank"></label>
@@ -149,6 +148,7 @@
                         $("#email").removeAttr("value");
                         $("#phone").removeAttr("value");
                         $("#regName").removeAttr("value");
+                        $("#pwd").removeAttr("value");
                     }
                     else
                     {
@@ -159,6 +159,17 @@
                             $("#pwdRepeat").focus();
                             return false;
                         }
+                        console.log($("#personRegForm").serialize());
+                        $.post("http://localhost:8083/user/update",$("#personRegForm").serialize(), function(data){
+                            console.log(data.status);
+                            if(data.status == 200){
+                                alert('用户修改成功！需要重新登录');
+                                return location.href = "http://localhost:8083/page/login";
+                            } else {
+                                alert("修改失败！");
+                            }
+                        });
+
                         $(".password-input").addClass("input-disabled")
                         $("#email").attr("disabled","disabled");
                         $("#phone").attr("disabled","disabled");
@@ -167,42 +178,12 @@
 
                         $(this).attr("value","修改")
                         v_btn_re_in = 0;
-                        beforeSubmit();
                     }
                     })
                 </script>
-
-
             </div>
-            <span class="clr"></span>
         </form>
     </div>
-    <script type="text/javascript">
-            function beforeSubmit() {
-                //检查手机号是否已经被占用
-                $.ajax({
-                    url : "http://localhost:8083/user/check/"+$("#phone").val()+"/2?r=" + Math.random(),
-                    success : function(data) {
-                        if (data.data) {
-                            submit();
-                        } else {
-                            alert("此手机号已经被注册！");
-                            $("#phone").select();
-                        }
-                    }
-                    });
-            }
-            function submit() {
-                $.post("http://localhost:8083/user/update",$("#personRegForm").serialize(), function(data){
-                    if(data.status == 200){
-                        alert('用户修改成功！需要重新登录');
-                        return location.href = "http://localhost:8083/page/login";
-                    } else {
-                        alert("修改失败！");
-                    }
-                });
-            }
-    </script>
 </div>
 </body>
 </html>

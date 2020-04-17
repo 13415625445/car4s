@@ -1,0 +1,17 @@
+.content .row{
+    margin-top: 20px;
+}
+
+
+.content .person-left .row{
+    text-align: center;
+}
+.content .person-left .headimage{
+    width: 300px;
+    height: 300px;
+    display: inline-block;
+}
+.content .person-left .headimage img{
+    width: 300px;
+    height: 300px;
+}

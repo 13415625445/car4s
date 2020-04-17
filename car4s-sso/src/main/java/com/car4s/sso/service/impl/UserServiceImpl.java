@@ -111,4 +111,27 @@ public class UserServiceImpl implements UserService {
         }
         return Car4sResult.ok();
     }
+
+    @Override
+    public Car4sResult updateUser(TbUser user) {
+        TbUser tbUser = tbUserMapper.selectByPrimaryKey(user.getId());
+        if(user.getUsername() != null && user.getUsername() !="") {
+            tbUser.setUsername(user.getUsername());
+        }
+        if(user.getPassword() != null && user.getPassword() !="") {
+            tbUser.setPassword(DigestUtils.md5DigestAsHex(user.getPassword().getBytes()));
+        }
+        if(user.getPhone() != null && user.getPhone() !="") {
+
+            tbUser.setPhone(user.getPhone());
+        }
+        if(user.getEmail() != null && user.getEmail() !="") {
+            tbUser.setEmail(user.getEmail());
+        }
+        if(user.getFavoriteModel() != null && user.getFavoriteModel() !="") {
+            tbUser.setFavoriteModel(user.getFavoriteModel());
+        }
+        tbUserMapper.updateByPrimaryKey(tbUser);
+        return Car4sResult.ok();
+    }
 }

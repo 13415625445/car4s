@@ -1,0 +1,17 @@
+.content .good-title{
+    margin-bottom: 20px;
+}
+
+.content .good-header .pic-list{
+    list-style: none;
+}
+.content .good-header .good-header-content{
+    margin-top:40px;
+}
+.content .good-header .good-header-content>div{
+    margin-top:20px;
+    text-align: center;
+}
+.content .good-content .good-content-title{
+    text-align: center;
+}

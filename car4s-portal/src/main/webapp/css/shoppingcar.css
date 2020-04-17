@@ -1,0 +1,66 @@
+
+.content .shopping-table th{
+}
+.content .good-btn-list {
+    text-align: right;
+}
+.content .good-btn-list button{
+    min-width:150px;
+    min-height: 40px;
+
+}
+
+.content .shopping-table .table-head-check .checkbox{
+    margin:0px;
+}
+.content .shopping-table .good-total span{
+    font-weight: bold;
+    font-size: 20px;
+    color: red;
+}
+.content .shopping-table span {
+    padding: 0px !important;
+    margin:0px !important;
+}
+@media screen and (max-width: 1100px) {
+    .content .shopping-table .good-name img{
+        width:60px;
+        height:40px;
+    }
+    .content .shopping-table .good-name span{
+        font-size: 14px;
+    }
+    .content .shopping-table td{
+        line-height: 40px;
+    }
+    .content .shopping-table .good-number input{
+        margin-top:3px;
+    }
+}
+@media screen and (min-width: 1100px) {
+    .content .shopping-table .good-name img{
+        width:200px;
+        height:130px;
+    }
+    .content .shopping-table .good-name span{
+        font-size: 16px;
+    }
+    .content .shopping-table td{
+        line-height: 130px;
+        
+    }
+    .content .shopping-table .good-number input{
+        margin-top:48px;
+    }
+}
+
+
+.content .order-table .more{
+    /* display: none; */
+}
+
+.content .total-price{
+    font-size: 20px;
+    color: red;
+    font-weight: bold;
+}

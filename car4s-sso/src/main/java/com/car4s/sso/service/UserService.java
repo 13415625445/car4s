@@ -34,4 +34,9 @@ public interface UserService {
      * 登出
      */
     Car4sResult outLogin(String token);
+
+    /**
+     * 修改用户
+     */
+    Car4sResult updateUser(TbUser user);
 }
