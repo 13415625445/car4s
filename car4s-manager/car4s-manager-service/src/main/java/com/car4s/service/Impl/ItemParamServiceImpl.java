@@ -58,11 +58,22 @@ public class ItemParamServiceImpl implements ItemParamService {
     public EUDataGridResult getItemParamList(Integer page, Integer rows) {
         TbItemParamExample tbItemExample = new TbItemParamExample();
         PageHelper.startPage(page,rows);
-        List<TbItemParam> tbItemParams = tbItemParamMapper.selectByExample(tbItemExample);
+        List<TbItemParam> tbItemParams = tbItemParamMapper.selectByExampleWithBLOBs(tbItemExample);
         EUDataGridResult euDataGridResult = new EUDataGridResult();
         PageInfo<TbItemParam> pageInfo = new PageInfo<>(tbItemParams);
         euDataGridResult.setTotal(pageInfo.getTotal());
         euDataGridResult.setRows(tbItemParams);
         return euDataGridResult;
+    }
+
+    @Override
+    public Car4sResult delete(Long ids) {
+        try {
+            tbItemParamMapper.deleteByPrimaryKey(ids);
+            return Car4sResult.ok();
+        } catch (Exception e) {
+            e.printStackTrace();
+            return Car4sResult.build(400, "删除出错");
+        }
     }
 }

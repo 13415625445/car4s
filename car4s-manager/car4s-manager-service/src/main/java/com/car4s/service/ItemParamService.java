@@ -11,4 +11,5 @@ public interface ItemParamService {
     Car4sResult getItemParamByCid(Long itemCatId);
     Car4sResult insertItemParam(TbItemParam itemParam);
     EUDataGridResult getItemParamList(Integer page, Integer rows);
+    Car4sResult delete(Long ids);
 }

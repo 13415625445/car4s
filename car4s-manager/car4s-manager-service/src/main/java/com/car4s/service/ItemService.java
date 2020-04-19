@@ -16,4 +16,6 @@ public interface ItemService {
 
     Car4sResult createItem(TbItem item, String itemDesc, String itemParam) throws Exception;
 
+    Car4sResult delete(Long itemId);
+
 }

@@ -2,7 +2,7 @@
 	pageEncoding="UTF-8"%>
 <table cellpadding="5" style="margin-left: 30px" id="itemParamAddTable" class="itemParam">
 	<tr>
-		<td>商品类目:</td>
+		<td>车辆类目:</td>
 		<td><a href="javascript:void(0)" class="easyui-linkbutton selectItemCat">选择类目</a> 
 			<input type="hidden" name="cid" style="width: 280px;"></input>
 		</td>
@@ -35,7 +35,7 @@
 		</ul>
 	</li>
 </div>
-<script style="text/javascript">
+<script type="text/javascript">
 	$(function(){
 		TAOTAO.initItemCat({
 			fun:function(node){

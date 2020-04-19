@@ -45,4 +45,10 @@ public class ItemParamController {
         Car4sResult result = itemParamService.insertItemParam(tbItemParam);
         return result;
     }
+
+    @RequestMapping("/delete")
+    public Car4sResult delete(Long ids){
+        Car4sResult result = itemParamService.delete(ids);
+        return result;
+    }
 }

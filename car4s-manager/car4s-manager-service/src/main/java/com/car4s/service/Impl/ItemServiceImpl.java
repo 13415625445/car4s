@@ -6,10 +6,7 @@ import com.car4s.common.utils.IDUtil;
 import com.car4s.generator.mapper.TbItemDescMapper;
 import com.car4s.generator.mapper.TbItemMapper;
 import com.car4s.generator.mapper.TbItemParamItemMapper;
-import com.car4s.generator.pojo.TbItem;
-import com.car4s.generator.pojo.TbItemDesc;
-import com.car4s.generator.pojo.TbItemExample;
-import com.car4s.generator.pojo.TbItemParamItem;
+import com.car4s.generator.pojo.*;
 import com.car4s.service.ItemService;
 import com.github.pagehelper.PageHelper;
 import com.github.pagehelper.PageInfo;
@@ -70,6 +67,25 @@ public class ItemServiceImpl implements ItemService {
             throw new Exception();
         }
         return Car4sResult.ok();
+    }
+
+    @Override
+    public Car4sResult delete(Long itemId) {
+        try {
+            tbItemMapper.deleteByPrimaryKey(itemId);
+            TbItemDescExample tbItemDescExample = new TbItemDescExample();
+            TbItemDescExample.Criteria criteria = tbItemDescExample.createCriteria();
+            criteria.andItemIdEqualTo(itemId);
+            tbItemDescMapper.deleteByExample(tbItemDescExample);
+            TbItemParamItemExample tbItemParamItemExample = new TbItemParamItemExample();
+            TbItemParamItemExample.Criteria criteria1 = tbItemParamItemExample.createCriteria();
+            criteria1.andItemIdEqualTo(itemId);
+            tbItemParamItemMapper.deleteByExample(tbItemParamItemExample);
+            return Car4sResult.ok();
+        } catch (Exception e) {
+            e.printStackTrace();
+            return Car4sResult.build(400,"删除出错");
+        }
     }
 
     private Car4sResult insertItemDesc(Long itemId, String desc){

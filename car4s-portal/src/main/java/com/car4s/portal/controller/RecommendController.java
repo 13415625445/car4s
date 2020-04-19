@@ -20,6 +20,14 @@ public class RecommendController {
     @Autowired
     private RecommendService recommendService;
 
+    /**
+     * 推荐模块
+     * @param request
+     * @param response
+     * @param model
+     * @return
+     * @throws Exception
+     */
     @RequestMapping("/recommend")
     public String recommendItem(HttpServletRequest request, HttpServletResponse response, Model model) throws Exception {
         List<Item> itemList = recommendService.getRecommendItems(request, response);
