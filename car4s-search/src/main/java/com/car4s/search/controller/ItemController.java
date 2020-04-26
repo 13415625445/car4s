@@ -21,6 +21,7 @@ public class ItemController {
     @Autowired
     private ItemService itemService;
 
+    //导入全部车辆进入索引
     @RequestMapping("/importAllItems")
     @ResponseBody
     public Car4sResult importAllItems(){

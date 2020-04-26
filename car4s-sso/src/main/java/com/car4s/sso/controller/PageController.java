@@ -11,11 +11,13 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @RequestMapping("/page")
 public class PageController {
 
+    //注册
     @RequestMapping("/register")
     public String showRegister(){
         return "register";
     }
 
+    //登录
     @RequestMapping("/login")
     public String showLogin(String redirect, Model model){
         model.addAttribute("redirect", redirect);

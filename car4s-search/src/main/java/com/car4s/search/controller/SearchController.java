@@ -21,6 +21,7 @@ public class SearchController {
     @Autowired
     private ItemSearchService itemSearchService;
 
+    //根据所给关键字进行搜索（缺点：只要符合其中一个字就识别为所要的车辆，正确性需要调整）
     @RequestMapping(value = "/query", method = RequestMethod.GET)
     @ResponseBody
     public Car4sResult search(@RequestParam("q")String queryString, @RequestParam(defaultValue = "1")Integer page, @RequestParam(defaultValue = "60")Integer rows){

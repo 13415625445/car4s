@@ -66,17 +66,21 @@
 										<div class="consignee-item item-selected"
 											 consigneeId="137617472" id="consignee_index_div_137617472">
 											<b></b>
-											<div class="user-name">
-												<div class="fl">
-													<strong limit="4">${user.username}</strong>&nbsp;&nbsp;
+											<div>
+												<div>
+													<h3 limit="4">${user.username}</h3>&nbsp;&nbsp;
 												</div>
 											</div>
-											<div class="user-name">
-												<div class="fl">
-													<strong limit="4">${user.phone}</strong>&nbsp;&nbsp;
+											<div>
+												<div>
+													<h3 limit="4">${user.phone}</h3>&nbsp;&nbsp;
 												</div>
 											</div>
-											<div class="adr-m">${user.email}</div>
+											<div>
+												<div>
+													<h3 limit="4">${user.email}</h3>&nbsp;&nbsp;
+												</div>
+											</div>
 										</div>
 									</li>
 								</ul>

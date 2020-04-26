@@ -33,12 +33,6 @@
     }
     
     var toolbar = [{
-        text:'新增',
-        iconCls:'icon-add',
-        handler:function(){
-        	$(".tree-title:contains('新增商品')").parent().click();
-        }
-    },{
         text:'删除',
         iconCls:'icon-cancel',
         handler:function(){

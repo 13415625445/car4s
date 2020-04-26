@@ -17,7 +17,7 @@ public class RedisController {
     @Autowired
     private RedisService redisService;
 
-    //删除缓存
+    //删除内容缓存
     @RequestMapping("/content/{contentCid}")
     @ResponseBody
     public Car4sResult contentCacheSync(@PathVariable Long contentCid){

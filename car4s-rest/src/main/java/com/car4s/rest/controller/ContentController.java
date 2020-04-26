@@ -22,6 +22,7 @@ public class ContentController {
     @Autowired
     private ContentService contentService;
 
+    //根据内容分类ID获取内容（目前为广告）
     @RequestMapping("/list/{contentCategoryId}")
     @ResponseBody
     public Car4sResult getContentList(@PathVariable Long contentCategoryId){

@@ -20,6 +20,8 @@ public class LoginInterceptor implements HandlerInterceptor {
     @Autowired
     private UserServiceImpl userService;
 
+
+
     @Override
     public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object handler) throws Exception {
         String token = CookieUtil.getCookieValue(request, "TT_TOKEN");

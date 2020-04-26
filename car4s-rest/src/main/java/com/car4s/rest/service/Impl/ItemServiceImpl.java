@@ -45,7 +45,7 @@ public class ItemServiceImpl implements ItemService {
     public Car4sResult getItemBaseInfo(long itemId) {
         try {
             String json = jedisClient.get(REDIS_ITEM_KEY + ":" + itemId + ":base");
-            if(json == null || json == "null" || json == ""){
+            if(json != null && json != "null" && json != ""){
                 TbItem item = JsonUtil.jsonToPojo(json, TbItem.class);
                 return Car4sResult.ok(item);
             }

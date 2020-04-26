@@ -6,6 +6,7 @@ import com.car4s.generator.mapper.TbOrderMapper;
 import com.car4s.generator.mapper.TbOrderShippingMapper;
 import com.car4s.generator.pojo.*;
 import com.car4s.order.dao.JedisClient;
+import com.car4s.order.pojo.Order;
 import com.car4s.order.service.OrderService;
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -42,7 +43,7 @@ public class OrderServiceImpl implements OrderService {
 
 
     @Override
-    public Car4sResult createOrder(TbOrder order, List<TbOrderItem> itemList) {
+    public Car4sResult createOrder(Order order, List<TbOrderItem> itemList) {
         String string = jedisClient.get(ORDER_GEN_KEY);
         if(StringUtils.isBlank(string)){
             jedisClient.set(ORDER_GEN_KEY, ORDER_INIT_ID);
@@ -56,12 +57,16 @@ public class OrderServiceImpl implements OrderService {
         //0.未评价 1,已评价
         order.setBuyerRate(0);
         orderMapper.insert(order);
+        int sum = 0;
         for (TbOrderItem orderItem : itemList) {
             long orderDetailId = jedisClient.incr(ORDER_DETAIL_GEN_KEY);
             orderItem.setId(orderDetailId+"");
             orderItem.setOrderId(orderId+"");
             orderItemMapper.insert(orderItem);
+            sum+=orderItem.getPrice();
         }
+        order.setPayment(sum+"");
+        orderMapper.updateByPrimaryKey(order);
         return Car4sResult.ok(orderId);
     }
 

@@ -62,8 +62,6 @@
                             </div>
                             <div class="cell p-price"><span class="price">¥<fmt:formatNumber groupingUsed="false" value="${cart.price / 100}" maxFractionDigits="2" minFractionDigits="2"/> </span></div>
                             <div class="cell p-inventory stock-11345721">有货</div>
-                            <div class="cell p-remove"><a id="remove-11345721-1" data-more="removed-87.20-1" clstag="clickcart|keycount|xincart|btndel318558" class="cart-remove" href="/cart/delete/${cart.id}.html">评价</a>
-                            </div>
                         </div>
                     </div>
                 </c:forEach>

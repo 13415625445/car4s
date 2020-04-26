@@ -16,7 +16,7 @@
    <link type="text/css" rel="stylesheet" href="/css/base.css" />
    <link rel="stylesheet" type="text/css" href="/css/purchase.base.2012.css" />
    <link rel="stylesheet" type="text/css" href="/css/purchase.sop.css" />
-   <title>订单成功页面 - 淘淘商城</title>
+   <title>预约成功页面</title>
    <script type="text/javascript" src="/js/jquery-1.6.4.js"></script>
    <script type="text/javascript" src="/js/base-2011.js" charset="utf-8"></script>
    <script type="text/javascript" src="/js/jquery.cookie.js" charset="utf-8"></script>
@@ -38,14 +38,12 @@
 		    <ul class="list-order">
 			    <li class="li-st">
 					<div class="fore1">预约号：<a href="javascript:void(0)">${orderId }</a></div>
-					<!-- 货到付款 -->
-					<div class="fore2">预计价格：<strong class="ftx-01">${payment}元</strong></div>
 					<div class="fore3">
 					   	4S店客服 &nbsp; 联系时间: 预计 ${date};
 					</div>
 				</li>
 				<li class="li-st">
-					<div class="fore1"><a href="/order/order-cart.html">查看预约信息</a></div>
+					<div class="fore1"><a href="/order/show.html">查看预约信息</a></div>
 				</li>
 			</ul>
 

@@ -85,7 +85,7 @@ public class RecommendServiceImpl implements RecommendService {
                 }
             }
             else {
-                response.sendRedirect("localhost:8083/page/login");
+                response.sendRedirect("http://localhost:8083/page/login");
         }
         return null;
     }

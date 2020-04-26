@@ -20,6 +20,7 @@ public class orderController {
     @Autowired
     private OrderService orderService;
 
+    //新建预约信息
     @RequestMapping("/create")
     @ResponseBody
     public Car4sResult createOrder(@RequestBody Order order){
@@ -32,6 +33,7 @@ public class orderController {
         }
     }
 
+    //查看预约信息
     @RequestMapping("/show")
     @ResponseBody
     public Car4sResult showOrder(@RequestBody TbUser user){

@@ -47,14 +47,10 @@
     	<div id="tabs" class="easyui-tabs">
 		    <div title="首页" style="padding:20px;">
 				<div>
-				<a href="http://192.168.117.131:8080/solr/collection1/update/?stream.body=%3Cdelete%3E%3Cquery%3E*:*%3C/query%3E%3C/delete%3E&stream.contentType=text/xml;charset=utf-8&commit=true">
-					<button>删除solr索引库</button>
-				</a>
+					<button onclick="empty()">删除solr索引库</button>
 				</div>
 				<div>
-					<a href="http://localhost:8080/search/manager/importAllItems">
-						<button>导入车辆到solr索引库</button>
-					</a>
+					<button onclick="addIndex()">导入车辆到solr索引库</button>
 				</div>
 			</div>
 		</div>
@@ -81,6 +77,34 @@ $(function(){
 		}
 	});
 });
+</script>
+<script type="text/javascript">
+    function empty() {
+        alert("清空solr索引成功!!!");
+        $.ajax({
+            url : "http://192.168.117.131:8080/solr/collection1/update/?stream.body=%3Cdelete%3E%3Cquery%3E*:*%3C/query%3E%3C/delete%3E&stream.contentType=text/xml;charset=utf-8&commit=true",
+            success : function(data) {
+                if (data.data) {
+                   alert("清空solr索引成功!!!");
+                } else {
+                    alert("清空solr索引失败!!!");
+                }
+            }
+        });
+    }
+    function addIndex() {
+        alert("重导solr索引成功!!!");
+        $.ajax({
+            url : "http://localhost:8080/search/manager/importAllItems",
+            success : function(data) {
+                if (data.data) {
+                    alert("重导solr索引成功!!!");
+                } else {
+                    alert("重导solr索引失败!!!");
+                }
+            }
+        });
+    }
 </script>
 </body>
 </html>

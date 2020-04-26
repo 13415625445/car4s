@@ -29,6 +29,7 @@ public class UserController {
     @Autowired
     private UserService userService;
 
+    //检查数据是否符合规范
     @RequestMapping("/check/{param}/{type}")
     @ResponseBody
     public Object checkData(@PathVariable String param, @PathVariable Integer type, String callback) {
@@ -129,6 +130,7 @@ public class UserController {
 //        }
     }
 
+    //查看用户信息
     @RequestMapping("/show")
     public String showUser(HttpServletRequest request, HttpServletResponse response, Model model) throws IOException {
         String token = CookieUtil.getCookieValue(request, "TT_TOKEN");
