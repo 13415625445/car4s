@@ -23,6 +23,7 @@ public class ContrastController {
     @Autowired
     private ItemService itemService;
 
+    //对比模块
     @ResponseBody
     @RequestMapping(value="/item/{itemId}",produces = "text/html; charset=utf-8")
     public String showItemById(@PathVariable Long itemId) {
@@ -31,6 +32,7 @@ public class ContrastController {
         return json;
     }
 
+    //对比展示
     @RequestMapping("/show")
     public String showItem(Model model) {
         List<ItemInfo> list = itemService.getItemList();

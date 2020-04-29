@@ -54,7 +54,7 @@ public class RecommendServiceImpl implements RecommendService {
             Car4sResult car4sResult = Car4sResult.formatToList(json, TbOrderItem.class);
             if (car4sResult.getStatus() == 200) {
                 List<TbOrderItem> orderItemList = (List<TbOrderItem>) car4sResult.getData();
-                if(orderItemList.size()>0){
+                if(orderItemList != null){
                     List<Item> totalList = new ArrayList<>();
                     for (TbOrderItem orderItem : orderItemList) {
                         ItemInfo item = itemService.getItemById(Long.valueOf(orderItem.getItemId()));

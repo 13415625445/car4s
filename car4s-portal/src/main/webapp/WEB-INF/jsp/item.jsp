@@ -119,7 +119,7 @@
 				<ul class="tab">
 					<li clstag="shangpin|keycount|product|pinfotab" data-widget="tab-item" class="curr"><a href="javascript:;" >商品介绍</a></li>
 					<li clstag="shangpin|keycount|product|pcanshutab" data-widget="tab-item"><a href="javascript:;" >规格参数</a></li>
-					<li clstag="shangpin|keycount|product|pingjiatab" data-widget="tab-item"><a href="javascript:;" >商品评价</a></li>
+					<li clstag="shangpin|keycount|product|pingjiatab" data-widget="tab-item"><a href="javascript:;" ></a></li>
 				</ul>
 			</div>
 			<div class="mc" data-widget="tab-content" id="product-detail-1">

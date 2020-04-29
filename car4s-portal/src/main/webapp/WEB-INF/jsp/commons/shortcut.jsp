@@ -29,6 +29,5 @@
 				</div>
 			</li>
 		</ul>
-		<span class="clr"></span>
 	</div>
 </div>
